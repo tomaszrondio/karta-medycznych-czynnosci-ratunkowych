@@ -1,18 +1,11 @@
 .wrapper {
- margin: 0 auto;
- width: 1001px !important;
- height: 1500px !important;
- background-size:  100% 100%;
+  margin: 0 auto;
+  width: 934px !important;
+  height: 1400px !important;
+  background-size: 100% 100%;
   position: relative;
-
   background-repeat: no-repeat;
   background-position: 0 0;
-
-  .image {
-    width: 100%;
-    height: 100%;
-   
-  }
 }
 
 .wrapper input,
@@ -29,6 +22,25 @@
   padding: 0;
 }
 
+.print-button-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.print-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.print-button:hover {
+  background: #0056b3;
+}
+
 @media print {
   @page {
     size: A4;
@@ -42,10 +54,8 @@
   
   .wrapper {
     margin: 0 auto;
-  
-    width: 1001px !important;
- height: 1500px !important;
-
+    width: 934px !important;
+    height: 1400px !important;
   }
   
   .wrapper input,
@@ -54,5 +64,9 @@
   .wrapper input[type="radio"],
   .wrapper select {
     border: none !important;
+  }
+  
+  .no-print {
+    display: none !important;
   }
 }
