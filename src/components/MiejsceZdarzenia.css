@@ -1,0 +1,52 @@
+/* Checkboxes positioned in MIEJSCE ZDARZENIA box on the right */
+
+.miejsce-container {
+  position: absolute;
+  top: 120px;
+  left: 835px;
+  width: 160px;
+  height: 115px;
+ 
+}
+.checkbox-1 {
+  top: 18px;
+  left: 136px;
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox-2 {
+  top: 37px;
+  left: 136px;
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox-3 {
+  top: 56px;
+  left: 136px;
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox-4 {
+  top: 74px;
+  left: 136px;
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox-5 {
+  top: 93px;
+  left: 136px;
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox-6 {
+  top: 76px;
+  left: 54px;
+
+  width: 18px;
+  height: 18px;
+}
