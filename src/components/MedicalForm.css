@@ -1,5 +1,12 @@
+.form-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 .wrapper {
-  margin: 0 auto;
   width: 204mm;
   height: 294mm;
   background-size: 204mm 294mm;
@@ -7,6 +14,7 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   box-sizing: border-box;
+  transform-origin: top center;
 }
 
 .wrapper input,
@@ -59,12 +67,20 @@
     background: white !important;
   }
   
+  .form-container {
+    width: auto !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+  
   .wrapper {
     margin: 0 !important;
     padding: 0 !important;
     width: 204mm !important;
     height: 294mm !important;
     background-size: 204mm 294mm !important;
+    transform: none !important;
+    margin-bottom: 0 !important;
     page-break-inside: avoid !important;
     page-break-after: avoid !important;
     break-inside: avoid !important;
