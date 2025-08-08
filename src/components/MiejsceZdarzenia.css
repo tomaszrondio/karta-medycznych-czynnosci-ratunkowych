@@ -2,52 +2,50 @@
 
 .miejsce-container {
   position: absolute;
-  top: 110px;
-  left: 780px;
-  width: 150px;
-  height: 110px;
-
+  top: 24.7mm;
+  left: 175.4mm;
+  width: 33.7mm;
+  height: 24.7mm;
 }
 
 .checkbox-1 {
-  top: 18px;
-  left: 126px;
-  width: 17px;
-  height: 17px;
+  top: 4.0mm;
+  left: 28.3mm;
+  width: 3.8mm;
+  height: 3.8mm;
 }
 
 .checkbox-2 {
-  top: 37px;
-  left: 126px;
-  width: 17px;
-  height: 17px;
+  top: 8.3mm;
+  left: 28.3mm;
+  width: 3.8mm;
+  height: 3.8mm;
 }
 
 .checkbox-3 {
-  top: 54px;
-  left: 126px;
-  width: 17px;
-  height: 17px;
+  top: 12.1mm;
+  left: 28.3mm;
+  width: 3.8mm;
+  height: 3.8mm;
 }
 
 .checkbox-4 {
-  top: 71px;
-  left: 126px;
-  width: 17px;
-  height: 17px;
+  top: 16.0mm;
+  left: 28.3mm;
+  width: 3.8mm;
+  height: 3.8mm;
 }
 
 .checkbox-5 {
-  top: 88px;
-  left: 126px;
-  width: 17px;
-  height: 17px;
+  top: 19.8mm;
+  left: 28.3mm;
+  width: 3.8mm;
+  height: 3.8mm;
 }
 
 .checkbox-6 {
-  top: 72px;
-  left: 50px;
-
-  width: 17px;
-  height: 17px;
+  top: 16.2mm;
+  left: 11.2mm;
+  width: 3.8mm;
+  height: 3.8mm;
 }

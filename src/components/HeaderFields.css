@@ -1,24 +1,24 @@
 
 /* First field: Oznaczenie dysponenta zespolu ratownictwa medycznego (ZRM) */
 .field-1 {
-  top: 50px;
-  left: 5px;
-  width: 598px;
-  height: 35px;
+  top: 11.2mm;
+  left: 1.1mm;
+  width: 134.5mm;
+  height: 7.9mm;
 }
 
 /* Second field: Kod ZRM realizującego zlecenie */
 .field-2 {
-  top: 50px;
-  left: 610px;
-  width: 175px;
-  height: 35px;
+  top: 11.2mm;
+  left: 137.2mm;
+  width: 39.3mm;
+  height: 7.9mm;
 }
 
 /* Third field: Nr zlecenia wyjazdu */
 .field-3 {
-  top: 50px;
-  left: 790px;
-  width: 140px;
-  height: 35px;
+  top: 11.2mm;
+  left: 177.7mm;
+  width: 31.5mm;
+  height: 7.9mm;
 }
