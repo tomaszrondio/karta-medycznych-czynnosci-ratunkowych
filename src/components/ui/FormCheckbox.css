@@ -1,0 +1,29 @@
+.form-checkbox {
+  width: 3.5mm;
+  height: 3.5mm;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: 1px solid red;
+  position: relative;
+  cursor: pointer;
+}
+
+.form-checkbox.row-selected {
+  border: 1px solid transparent !important;
+}
+
+.form-checkbox:checked::before {
+  content: '✕';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 3.5mm;
+  font-weight: 900;
+  line-height: 0.8;
+  font-family: Arial, sans-serif;
+  text-shadow: 0.2mm 0 black, -0.1mm 0 black, 0 0.2mm black, 0 -0.1mm black;
+}

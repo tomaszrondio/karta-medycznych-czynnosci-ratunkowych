@@ -1,0 +1,184 @@
+/* Uklad Oddechowy container */
+.uklad-oddechowy-container {
+  position: absolute;
+  top: 51mm;
+  left: 54mm;
+  width: 35mm;
+  height: 65mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+/* Czestosc oddechow - single two-digit input */
+.czestosc-oddechow {
+  position: relative;
+}
+
+.czestosc-input {
+       top: 4mm;
+    left: 16.5mm;
+}
+
+/* T/N Section */
+.tn-section {
+  position: relative;
+}
+
+.tn-row {
+  position: relative;
+}
+
+/* Regularny row */
+.regularny-t {
+  position: absolute;
+  top: 9.7mm;
+  left: 19.7mm;
+}
+
+.regularny-n {
+  position: absolute;
+  top: 9.7mm;
+  left: 27.2mm;
+}
+
+/* Nieregularny row */
+.nieregularny-t {
+  position: absolute;
+  top: 14.9mm;
+  left: 19.7mm;
+}
+
+.nieregularny-n {
+  position: absolute;
+  top: 14.9mm;
+  left: 27.2mm;
+}
+
+/* Bezdech row */
+.bezdech-t {
+  position: absolute;
+  top: 19.7mm;
+  left: 19.7mm;
+}
+
+.bezdech-n {
+  position: absolute;
+  top: 19.7mm;
+  left: 27.2mm;
+}
+
+/* L/P Section - column based checkboxes */
+.lp-section {
+  position: relative;
+}
+
+/* L column checkboxes */
+.lp-symetryczny-l {
+  position: absolute;
+  top: 26.8mm;
+  left: 20mm;
+}
+
+.lp-furczenie-l {
+  position: absolute;
+  top: 30.8mm;
+  left: 20mm;
+}
+
+.lp-swisty-l {
+  position: absolute;
+  top: 34.8mm;
+  left: 20mm;
+}
+
+.lp-trzeszczenie-l {
+  position: absolute;
+  top: 38.8mm;
+  left: 20mm;
+}
+
+.lp-rzezenie-l {
+  position: absolute;
+  top: 42.8mm;
+  left: 20.2mm;
+}
+
+.lp-brak-l {
+  position: absolute;
+  top: 46.8mm;
+  left: 20.2mm;
+}
+
+.lp-inne-l {
+  position: absolute;
+  top: 50.8mm;
+ left: 20.2mm;
+}
+
+/* P column checkboxes */
+.lp-symetryczny-p {
+  position: absolute;
+  top: 26.8mm;
+  left: 26.5mm;
+}
+
+.lp-furczenie-p {
+  position: absolute;
+  top: 30.8mm;
+  left: 26.5mm;
+}
+
+.lp-swisty-p {
+  position: absolute;
+  top: 34.8mm;
+  left: 26.5mm;
+}
+
+.lp-trzeszczenie-p {
+  position: absolute;
+  top: 38.8mm;
+  left: 26.5mm;
+}
+
+.lp-rzezenie-p {
+  position: absolute;
+  top: 42.8mm;
+  left: 26.7mm;
+}
+
+.lp-brak-p {
+  position: absolute;
+  top: 46.8mm;
+  left: 26.7mm;
+}
+
+.lp-inne-p {
+  position: absolute;
+  top: 50.8mm;
+  left: 26.7mm;
+}
+
+/* FormTextarea for "inne" input */
+.inne-text-input {
+  position: absolute;
+  top: 51mm;
+  left: 8mm;
+  width: 11mm;
+  height: 5.5mm;
+  border: 1px solid transparent !important; /* Override FormTextarea default */
+}
+
+/* Show red border only when "inne" checkbox is selected */
+.inne-text-input.inne-selected {
+  border: 1px solid red !important;
+}
+
+/* Saturacja - single two-digit input */
+.saturacja {
+  position: relative;
+}
+
+.saturacja-input {
+ top: 56.8mm;
+    left: 17.2mm;
+}

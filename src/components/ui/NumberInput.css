@@ -1,0 +1,24 @@
+.number-input-container {
+  position: absolute;
+}
+
+.number-input {
+  width: 8.6mm;
+  height: 4.5mm;
+  border: 1px solid red;
+  background: transparent;
+  text-align: left;
+  font-size: 14px !important;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  letter-spacing: 1.6mm;
+  padding-left: .7mm !important;
+  padding-top: 0.1mm !important;
+}
+
+.number-input.filled {
+  border: 1px solid transparent;
+}

@@ -1,22 +1,23 @@
 import React from 'react';
 import './HeaderFields.css';
+import { FormTextarea } from '../ui';
 
 const HeaderFields: React.FC = () => {
   return (
     <>
       {/* Oznaczenie dysponenta zespolu ratownictwa medycznego (ZRM) */}
-      <textarea 
-        className="header-field field-1"
+      <FormTextarea 
+        className="field-1"
       />
       
       {/* Kod ZRM realizującego zlecenie: */}
-      <textarea 
-        className="header-field field-2"
+      <FormTextarea 
+        className="field-2"
       />
       
       {/* Nr zlecenia wyjazdu: */}
-      <textarea 
-        className="header-field field-3"
+      <FormTextarea 
+        className="field-3"
       />
     </>
   );

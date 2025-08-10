@@ -1,0 +1,56 @@
+/* Checkboxes positioned in MIEJSCE ZDARZENIA box on the right */
+
+.miejsce-container {
+  position: absolute;
+  top: 23mm;
+  left: 170mm;
+  width: 33mm;
+  height: 23mm;
+}
+
+.checkbox-1 {
+  top: 4.0mm;
+  left: 28mm;
+  width: 3.5mm;
+  height: 3.5mm;
+}
+
+.checkbox-2 {
+  top: 7.8mm;
+  left: 28mm;
+  width: 3.5mm;
+  height: 3.5mm;
+}
+
+.checkbox-3 {
+  top: 11.5mm;
+  left: 28mm;
+  width: 3.5mm;
+  height: 3.5mm;
+}
+
+.checkbox-4 {
+  top: 15.1mm;
+  left: 28mm;
+  width: 3.5mm;
+  height: 3.5mm;
+}
+
+.checkbox-5 {
+  top: 18.7mm;
+  left: 28mm;
+  width: 3.5mm;
+  height: 3.5mm;
+}
+
+.checkbox-6 {
+  top: 15.4mm;
+  left: 11.2mm;
+  width: 3.5mm;
+  height: 3.5mm;
+}
+
+/* Remove red border when any checkbox is selected */
+.miejsce-container.has-selection .form-checkbox {
+  border: none !important;
+}

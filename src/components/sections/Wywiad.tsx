@@ -1,9 +1,10 @@
 import React from 'react';
 import './Wywiad.css';
+import { FormTextarea } from '../ui';
 
 const Wywiad: React.FC = () => {
   return (
-    <textarea 
+    <FormTextarea 
       className="wywiad-field"
     />
   );

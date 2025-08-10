@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './MedicalForm.css';
 import backgroundImage from '../assets/background.png';
-import HeaderFields from './HeaderFields';
-import Wywiad from './Wywiad';
-import MiejsceZdarzenia from './MiejsceZdarzenia';
+import HeaderFields from './sections/HeaderFields';
+import Wywiad from './sections/Wywiad';
+import MiejsceZdarzenia from './sections/MiejsceZdarzenia';
+import GlasgowComaScale from './sections/GlasgowComaScale';
+import RTS from './sections/RTS';
+import UkladOddechowy from './sections/UkladOddechowy';
 
 const MedicalForm: React.FC = () => {
   const [scale, setScale] = useState(1);
@@ -45,6 +48,9 @@ const MedicalForm: React.FC = () => {
           <HeaderFields />
           <Wywiad />
           <MiejsceZdarzenia />
+          <GlasgowComaScale />
+          <RTS />
+          <UkladOddechowy />
         </div>
       </div>
       

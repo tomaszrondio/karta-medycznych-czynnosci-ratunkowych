@@ -1,0 +1,8 @@
+.form-textarea {
+  overflow: hidden;
+  resize: none;
+}
+
+.form-textarea.has-content {
+  border: none !important;
+}

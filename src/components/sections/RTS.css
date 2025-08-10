@@ -1,0 +1,58 @@
+/* RTS container */
+.rts-container {
+      position: absolute;
+    top: 50.5mm;
+    left: 34.5mm;
+    width: 19mm;
+    height: 63mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+.rts-section {
+  position: relative;
+}
+
+/* Respiratory Rate section - 5 options (4,3,2,1,0) */
+.resp-4 { top: 6.5mm; left: 14.6mm; }
+.resp-3 { top: 9.3mm; left: 14.6mm; }
+.resp-2 { top: 12.1mm; left: 14.6mm; }
+.resp-1 { top: 14.9mm; left: 14.6mm; }
+.resp-0 { top: 17.8mm; left: 14.5mm; }
+
+/* Systolic Blood Pressure section - 5 options (4,3,2,1,0) */
+.bp-4 { top: 24.5mm; left: 14.3mm; }
+.bp-3 { top: 27.3mm; left: 14.4mm; }
+.bp-2 { top: 30.1mm; left: 14.4mm; }
+.bp-1 { top: 32.9mm; left: 14.4mm; }
+.bp-0 { top: 35.9mm; left: 14.25mm; }
+
+/* Glasgow Coma Scale section - 5 options (4,3,2,1,0) */
+.gcs-4 { top: 42.1mm; left: 13.9mm; }
+.gcs-3 { top: 44.9mm; left: 14mm; }
+.gcs-2 { top: 47.7mm; left: 13.9mm; }
+.gcs-1 { top: 50.6mm; left: 13.9mm; }
+.gcs-0 { top: 53.4mm; left: 13.8mm; }
+
+/* RTS Sum display boxes */
+.rts-sum-display {
+  position: absolute;
+     top: 56.6mm;
+    left: 9.1mm;
+  display: flex;
+
+}
+
+.rts-sum-digit {
+  width: 3.8mm;
+  height: 4.5mm;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5mm;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  /* background: white; */
+  box-sizing: border-box;
+}
