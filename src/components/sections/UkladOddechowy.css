@@ -166,6 +166,14 @@
   width: 11mm;
   height: 5.5mm;
   border: 1px solid transparent !important; /* Override FormTextarea default */
+  resize: none;
+  overflow: hidden;
+  background: transparent;
+  outline: none;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  padding: 1px;
+  box-sizing: border-box;
 }
 
 /* Show red border only when "inne" checkbox is selected */

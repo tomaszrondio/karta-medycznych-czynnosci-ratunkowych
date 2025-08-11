@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './UkladOddechowy.css';
 import { FormCheckbox, FormTextarea } from '../ui';
 import NumberInput from '../ui/NumberInput';
@@ -15,6 +15,9 @@ const UkladOddechowy: React.FC = () => {
   // L/P column-based selection (independent columns)
   const [lSelection, setLSelection] = useState<string | null>(null);
   const [pSelection, setPSelection] = useState<string | null>(null);
+  const [inneText, setInneText] = useState('');
+  const [fontSize, setFontSize] = useState(16);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   // Saturacja - two digits
   const [saturacja, setSaturacja] = useState('');
@@ -38,6 +41,29 @@ const UkladOddechowy: React.FC = () => {
   const handlePSelectionChange = (selection: string) => {
     setPSelection(pSelection === selection ? null : selection);
   };
+
+  const adjustFontSize = () => {
+    const textarea = textareaRef.current;
+    if (!textarea || !inneText.trim()) {
+      setFontSize(16);
+      return;
+    }
+
+    let currentFontSize = 16;
+    textarea.style.fontSize = `${currentFontSize}px`;
+
+    // Check if content overflows
+    while (textarea.scrollHeight > textarea.clientHeight && currentFontSize > 8) {
+      currentFontSize -= 1;
+      textarea.style.fontSize = `${currentFontSize}px`;
+    }
+
+    setFontSize(currentFontSize);
+  };
+
+  useEffect(() => {
+    adjustFontSize();
+  }, [inneText]);
 
   return (
     <div className="uklad-oddechowy-container">
@@ -173,9 +199,13 @@ const UkladOddechowy: React.FC = () => {
         />
         
         {/* Text input next to "inne" */}
-        <FormTextarea
-          className={`inne-text-input ${(lSelection === 'inne' || pSelection === 'inne') ? 'inne-selected' : ''}`}
+        <textarea
+          ref={textareaRef}
+          className={`inne-text-input ${(lSelection === 'inne' || pSelection === 'inne') && !inneText.trim() ? 'inne-selected' : ''}`}
+          value={inneText}
+          onChange={(e) => setInneText(e.target.value)}
           placeholder=""
+          style={{ fontSize: `${fontSize}px` }}
         />
       </div>
 
