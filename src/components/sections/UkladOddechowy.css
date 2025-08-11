@@ -161,19 +161,21 @@
 /* FormTextarea for "inne" input */
 .inne-text-input {
   position: absolute;
-  top: 51mm;
-  left: 8mm;
-  width: 11mm;
+  top: 51.3mm;
+  left: 2mm;
+  width: 18mm;
   height: 5.5mm;
-  border: 1px solid transparent !important; /* Override FormTextarea default */
+  border: 1px solid transparent !important;
   resize: none;
   overflow: hidden;
   background: transparent;
   outline: none;
   font-family: Arial, sans-serif;
-  font-weight: normal;
+  font-weight: bold !important;
+  font-size: 8px;
   padding: 1px;
   box-sizing: border-box;
+  text-indent: 6mm;
 }
 
 /* Show red border only when "inne" checkbox is selected */

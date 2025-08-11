@@ -1,0 +1,40 @@
+/* Tetno container */
+.tetno-container {
+  position: absolute;
+ top: 103mm;
+    left: 87.5mm;
+    width: 31mm;
+    height: 10mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+
+.rytm-section {
+  position: relative;
+}
+
+/* Pulse rate number input with normal spacing */
+.tetno-normal-spacing {
+  width: 9mm !important;
+  letter-spacing: 0.2mm !important;
+}
+
+/* Pulse rate number input positioning */
+.tetno-input {
+  top: 4.2mm;
+  left: 0.2mm;
+}
+
+/* Rhythm checkboxes */
+.rytm-miarowe {
+  position: absolute;
+  top: .5mm;
+  left: 26.3mm;
+}
+
+.rytm-niemiarowe {
+  position: absolute;
+  top: 5.5mm;
+  left: 26.3mm;
+}

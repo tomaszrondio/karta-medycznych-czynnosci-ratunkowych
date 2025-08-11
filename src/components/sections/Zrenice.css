@@ -1,0 +1,100 @@
+/* Zrenice container */
+.zrenice-container {
+  position: absolute;
+     top: 51mm;
+    left: 88mm;
+    width: 31mm;
+    height: 39mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+.zrenice-subsection {
+  position: relative;
+}
+
+/* First subsection - Reakcja na światło */
+.reakcja-section {
+  margin-bottom: 15mm;
+}
+
+/* Reakcja na światło - L column */
+.reakcja-prawidlowa-l {
+  position: absolute;
+  top: 9.2mm;
+  left: 19.2mm;
+}
+
+.reakcja-powolna-l {
+  position: absolute;
+  top: 13.2mm;
+  left: 19.2mm;
+}
+
+.reakcja-brak-l {
+  position: absolute;
+  top: 17.2mm;
+  left: 19.2mm;
+}
+
+/* Reakcja na światło - P column */
+.reakcja-prawidlowa-p {
+  position: absolute;
+  top: 9.2mm;
+  left: 25.7mm;
+}
+
+.reakcja-powolna-p {
+  position: absolute;
+  top: 13.2mm;
+  left: 25.7mm;
+}
+
+.reakcja-brak-p {
+  position: absolute;
+  top: 17.2mm;
+  left: 25.7mm;
+}
+
+/* Second subsection - Szerokość */
+.szerokosc-section {
+  margin-top: 20mm;
+}
+
+/* Szerokość - L column */
+.szerokosc-normalna-l {
+  position: absolute;
+  top: 4.8mm;
+  left: 19.3mm;
+}
+
+.szerokosc-waska-l {
+  position: absolute;
+  top: 8.6mm;
+  left: 19.3mm;
+}
+
+.szerokosc-szeroka-l {
+  position: absolute;
+  top: 12.4mm;
+  left: 19.3mm;
+}
+
+/* Szerokość - P column */
+.szerokosc-normalna-p {
+  position: absolute;
+  top: 4.8mm;
+  left: 25.8mm;
+}
+
+.szerokosc-waska-p {
+  position: absolute;
+  top: 8.6mm;
+  left: 25.8mm;
+}
+
+.szerokosc-szeroka-p {
+  position: absolute;
+  top: 12.4mm;
+  left: 25.8mm;
+}

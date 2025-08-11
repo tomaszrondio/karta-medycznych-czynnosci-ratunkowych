@@ -19,6 +19,12 @@
   padding-top: 0.1mm !important;
 }
 
+/* 3-digit number input variant */
+.number-input[maxlength="3"] {
+  width: 12mm;
+  letter-spacing: 1.7mm;
+}
+
 .number-input.filled {
   border: 1px solid transparent;
 }

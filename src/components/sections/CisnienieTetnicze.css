@@ -1,0 +1,26 @@
+/* Cisnienie Tetnicze container */
+.cisnienie-tetnicze-container {
+  position: absolute;
+    top: 91mm;
+    left: 87.5mm;
+    width: 31mm;
+    height: 11mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+.cisnienie-reading {
+  position: relative;
+}
+
+/* First blood pressure input */
+.cisnienie-input-1 {
+  top: 4mm;
+  left: 0.3mm;
+}
+
+/* Second blood pressure input */
+.cisnienie-input-2 {
+  top: 4mm;
+  left: 13.3mm;
+}

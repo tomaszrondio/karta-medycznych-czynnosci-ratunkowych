@@ -1,0 +1,46 @@
+/* Inne container */
+.inne-container {
+  position: absolute;
+  top: 166mm;
+  left: 0mm;
+  width: 31mm;
+  height: 21mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+/* T/N Section */
+.tn-section {
+  position: relative;
+}
+
+.tn-row {
+  position: relative;
+}
+
+/* Row 1: Coaza - T/N */
+.coaza-t {
+  position: absolute;
+  top: 3.6mm;
+  left: 18.7mm;
+}
+
+.coaza-n {
+  position: absolute;
+  top: 3.6mm;
+  left: 25.6mm;
+}
+
+/* Row 2: Only T */
+.inne2-t {
+  position: absolute;
+  top: 8.8mm;
+  left: 18.7mm;
+}
+
+/* Row 3: Only T */
+.inne3-t {
+  position: absolute;
+  top: 13.6mm;
+  left: 18.7mm;
+}

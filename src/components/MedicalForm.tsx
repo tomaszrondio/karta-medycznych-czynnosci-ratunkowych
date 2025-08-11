@@ -7,6 +7,11 @@ import MiejsceZdarzenia from './sections/MiejsceZdarzenia';
 import GlasgowComaScale from './sections/GlasgowComaScale';
 import RTS from './sections/RTS';
 import UkladOddechowy from './sections/UkladOddechowy';
+import Zrenice from './sections/Zrenice';
+import CisnienieTetnicze from './sections/CisnienieTetnicze';
+import Tetno from './sections/Tetno';
+import Objawy from './sections/Objawy';
+import Inne from './sections/Inne';
 
 const MedicalForm: React.FC = () => {
   const [scale, setScale] = useState(1);
@@ -51,6 +56,11 @@ const MedicalForm: React.FC = () => {
           <GlasgowComaScale />
           <RTS />
           <UkladOddechowy />
+          <Zrenice />
+          <CisnienieTetnicze />
+          <Tetno />
+          <Objawy />
+          <Inne />
         </div>
       </div>
       

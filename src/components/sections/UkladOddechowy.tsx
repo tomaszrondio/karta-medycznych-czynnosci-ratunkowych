@@ -16,7 +16,7 @@ const UkladOddechowy: React.FC = () => {
   const [lSelection, setLSelection] = useState<string | null>(null);
   const [pSelection, setPSelection] = useState<string | null>(null);
   const [inneText, setInneText] = useState('');
-  const [fontSize, setFontSize] = useState(16);
+  const [fontSize, setFontSize] = useState(8);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   // Saturacja - two digits
@@ -45,20 +45,14 @@ const UkladOddechowy: React.FC = () => {
   const adjustFontSize = () => {
     const textarea = textareaRef.current;
     if (!textarea || !inneText.trim()) {
-      setFontSize(16);
+      setFontSize(8); // Use fixed 8px font size
       return;
     }
 
-    let currentFontSize = 16;
-    textarea.style.fontSize = `${currentFontSize}px`;
-
-    // Check if content overflows
-    while (textarea.scrollHeight > textarea.clientHeight && currentFontSize > 8) {
-      currentFontSize -= 1;
-      textarea.style.fontSize = `${currentFontSize}px`;
-    }
-
-    setFontSize(currentFontSize);
+    // Use fixed 8px font size instead of dynamic sizing
+    const fixedFontSize = 8;
+    textarea.style.fontSize = `${fixedFontSize}px`;
+    setFontSize(fixedFontSize);
   };
 
   useEffect(() => {

@@ -1,0 +1,149 @@
+/* Objawy container */
+.objawy-container {
+  position: absolute;
+  top: 115mm;
+  left: 0mm;
+  width: 31mm;
+  height: 50mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+/* T/N Section */
+.tn-section {
+  position: relative;
+}
+
+.tn-row {
+  position: relative;
+}
+
+/* Row 1 */
+.objaw1-t {
+  position: absolute;
+  top: 4.6mm;
+  left: 19.3mm;
+}
+
+.objaw1-n {
+  position: absolute;
+  top: 4.6mm;
+  left: 26.2mm;
+}
+
+/* Row 2 */
+.objaw2-t {
+  position: absolute;
+  top: 9.1mm;
+  left: 19.3mm;
+}
+
+.objaw2-n {
+  position: absolute;
+  top: 9.1mm;
+  left: 26.2mm;
+}
+
+/* Row 3 */
+.objaw3-t {
+  position: absolute;
+  top: 13.6mm;
+  left: 19.3mm;
+}
+
+.objaw3-n {
+  position: absolute;
+  top: 13.6mm;
+  left: 26.2mm;
+}
+
+/* Row 4 */
+.objaw4-t {
+  position: absolute;
+  top: 18.1mm;
+  left: 19.3mm;
+}
+
+.objaw4-n {
+  position: absolute;
+  top: 18.1mm;
+  left: 26.2mm;
+}
+
+/* Row 5 */
+.objaw5-t {
+  position: absolute;
+  top: 22.3mm;
+  left: 19.3mm;
+}
+
+.objaw5-n {
+  position: absolute;
+  top: 22.3mm;
+  left: 26.2mm;
+}
+
+/* Row 6 */
+.objaw6-t {
+  position: absolute;
+  top: 26.8mm;
+  left: 19.3mm;
+}
+
+.objaw6-n {
+  position: absolute;
+  top: 26.8mm;
+  left: 26.2mm;
+}
+
+/* Row 7 */
+.objaw7-t {
+  position: absolute;
+  top: 31.3mm;
+  left: 19.3mm;
+}
+
+.objaw7-n {
+  position: absolute;
+  top: 31.3mm;
+  left: 26.2mm;
+}
+
+/* Row 8 */
+.objaw8-t {
+  position: absolute;
+  top: 35.8mm;
+  left: 19.3mm;
+}
+
+.objaw8-n {
+  position: absolute;
+  top: 35.8mm;
+  left: 26.2mm;
+}
+
+/* Row 9 */
+.objaw9-t {
+  position: absolute;
+  top: 40.3mm;
+  left: 19.2mm;
+}
+
+.objaw9-n {
+  position: absolute;
+  top: 40.3mm;
+  left: 26.2mm;
+}
+
+/* Row 10 */
+.objaw10-t {
+  position: absolute;
+  top: 45mm;
+  left: 19mm;
+}
+
+.objaw10-n {
+  position: absolute;
+  top: 45mm;
+  left: 26.1mm;
+}

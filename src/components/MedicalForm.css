@@ -27,8 +27,13 @@
   background: transparent;
   font-size: 16px;
   font-family: Arial, sans-serif;
+  font-weight: bold;
   margin: 0;
   padding: 0;
+}
+
+.wrapper textarea:not(.inne-text-input) {
+  font-weight: normal;
 }
 
 .wrapper textarea {
