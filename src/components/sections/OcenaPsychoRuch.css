@@ -1,0 +1,34 @@
+/* Ocena Psycho-Ruch container */
+.ocena-psycho-ruch-container {
+  position: absolute;
+  top: 152mm;
+  left: 58mm;
+  width: 24mm;
+  height: 35mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+.ocena-w-normie {
+  position: absolute;
+  top: 9.6mm;
+  left: 18mm;
+}
+
+.ocena-spowolnialy {
+  position: absolute;
+  top: 15.1mm;
+  left: 18mm;
+}
+
+.ocena-pobudzony {
+  position: absolute;
+  top: 21.5mm;
+  left: 17.8mm;
+}
+
+.ocena-agresywny {
+  position: absolute;
+  top: 27.2mm;
+  left: 17.5mm;
+}

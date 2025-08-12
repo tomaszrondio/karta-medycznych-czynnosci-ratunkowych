@@ -1,0 +1,97 @@
+/* Skora container */
+.skora-container {
+  position: absolute;
+  top: 115mm;
+  left: 32mm;
+  width: 25mm;
+  height: 72mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+/* Wyglad section */
+.wyglad-section {
+  position: relative;
+}
+
+.wyglad-w-normie {
+  position: absolute;
+  top: 8mm;
+  left: 18.4mm;
+}
+
+.wyglad-blada {
+  position: absolute;
+  top: 12.5mm;
+  left: 18.4mm;
+}
+
+.wyglad-rumien {
+  position: absolute;
+  top: 17mm;
+  left: 18.4mm;
+}
+
+.wyglad-zazolcenie {
+  position: absolute;
+  top: 21.5mm;
+  left: 18.4mm;
+}
+
+.wyglad-sinica-obw {
+  position: absolute;
+  top: 26mm;
+  left: 18.4mm;
+}
+
+.wyglad-sinica-centr {
+  position: absolute;
+  top: 30.5mm;
+  left: 18.4mm;
+}
+
+/* Wilgotnosc section */
+.wilgotnosc-section {
+  position: relative;
+}
+
+.wilgotnosc-w-normie {
+  position: absolute;
+  top: 39.5mm;
+  left: 18.2mm;
+}
+
+.wilgotnosc-wilgotna {
+  position: absolute;
+  top: 44mm;
+  left: 18.2mm;
+}
+
+.wilgotnosc-sucha {
+  position: absolute;
+  top: 48.5mm;
+  left: 18.2mm;
+}
+
+/* Temperatura section */
+.temperatura-section {
+  position: relative;
+}
+
+.temperatura-w-normie {
+  position: absolute;
+  top: 57.5mm;
+  left: 18.2mm;
+}
+
+.temperatura-chlodna {
+  position: absolute;
+  top: 62.9mm;
+  left: 18.2mm;
+}
+
+.temperatura-ciepla {
+  position: absolute;
+  top: 67.4mm;
+  left: 18.2mm;
+}

@@ -1,0 +1,100 @@
+/* EkG container - next to Tony Serca */
+.ekg-container {
+  position: absolute;
+  top: 115mm;
+  left: 115mm;
+  width: 30mm;
+  height: 60mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+/* Checkboxes */
+.ekg-checkbox1 {
+  position: absolute;
+  top: 3.5mm;
+  left: 18.8mm;
+}
+
+.ekg-checkbox2 {
+    position: absolute;
+    top: 10.2mm;
+    left: 18.8mm;
+ 
+}
+
+.ekg-checkbox3 {
+  position: absolute;
+  top: 16.8mm;
+   left: 18.8mm;
+}
+
+.ekg-checkbox4 {
+  position: absolute;
+      top: 25.2mm;
+   left: 18.8mm;
+}
+
+.ekg-checkbox5 {
+  position: absolute;
+ top: 29.4mm;
+
+  left: 18.8mm;
+}
+
+.ekg-checkbox6 {
+  position: absolute;
+ top: 33.8mm;
+ left: 18.8mm;
+}
+
+.ekg-checkbox7 {
+  position: absolute;
+  top: 38mm;
+  left: 18.8mm;
+}
+
+.ekg-checkbox8 {
+  position: absolute;
+  top: 42.1mm;
+   left: 18.8mm;
+}
+
+.ekg-checkbox9 {
+  position: absolute;
+  top: 46.5mm;
+  left: 18.8mm;
+}
+
+.ekg-checkbox10 {
+  position: absolute;
+  top: 50.8mm;
+ left: 18.8mm;
+}
+
+.ekg-checkbox11 {
+  position: absolute;
+  top: 54.6mm;
+  left: 18.8mm;
+}
+
+.ekg-checkbox12 {
+  position: absolute;
+  top: 58.5mm;
+  left: 18.8mm;
+}
+
+.ekg-checkbox13 {
+  position: absolute;
+  top: 62.4mm;
+   left: 18.8mm;
+}
+
+/* Inne textarea */
+.ekg-inne-textarea {
+    position: absolute;
+    top: 68mm;
+    left: 5.5mm;
+    width: 18mm;
+  height: 4mm;
+}

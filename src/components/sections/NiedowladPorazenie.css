@@ -1,0 +1,44 @@
+/* Niedowład / Porażenie container - below Tony Serca */
+.niedowlad-porazenie-container {
+  position: absolute;
+  top: 134mm;
+  left: 83mm;
+  width: 30mm;
+  height: 17mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+/* Single checkbox at top */
+.niedowlad-w-normie {
+  position: absolute;
+  top: 1mm;
+  left: 23.9mm;
+}
+
+/* L/P columns - Row 1 */
+.niedowlad-row1-l {
+  position: absolute;
+  top: 7.8mm;
+  left: 20.1mm;
+}
+
+.niedowlad-row1-p {
+  position: absolute;
+  top: 8mm;
+  left: 24.5mm;
+}
+
+/* L/P columns - Row 2 */
+.niedowlad-row2-l {
+  position: absolute;
+  top: 11.8mm;
+  left: 20.1mm;
+}
+
+.niedowlad-row2-p {
+  position: absolute;
+     top: 11.8mm;
+  left: 24.5mm;
+}
+

@@ -1,0 +1,27 @@
+/* Poziom Glukozy container */
+.poziom-glukozy-container {
+  position: absolute;
+  top: 172mm;
+  left: 83mm;
+  width: 30mm;
+    height: 15mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+.glukoza-pierwszy {
+    position: absolute;
+   top: 2mm;
+    left: 14mm;
+    width: 7.5mm;
+    height: 4mm;
+}
+
+/* Drugi pomiar */
+.glukoza-drugi {
+    position: absolute;
+  top: 8mm;
+    left: 14mm;
+    width: 7.5mm;
+    height: 4mm;
+}

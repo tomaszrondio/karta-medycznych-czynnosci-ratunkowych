@@ -1,0 +1,20 @@
+/* Opis container - next to EkG */
+.opis-container {
+
+ position: absolute;
+    top: 115mm;
+    left: 141mm;
+    width: 62mm;
+    height: 72mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+/* Huge textarea */
+.opis-textarea {
+  position: absolute;
+  top: 3mm;
+  left: 0mm;
+ right: 0mm;
+ bottom: 0mm;
+}

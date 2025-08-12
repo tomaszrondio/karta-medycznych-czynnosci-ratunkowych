@@ -1,0 +1,55 @@
+/* Zapach z Ust container */
+.zapach-z-ust-container {
+  position: absolute;
+  top: 152mm;
+  left: 83mm;
+  width: 30mm;
+    height: 19mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+/* Brak zapachu checkbox */
+.zapach-brak {
+  position: absolute;
+  top: 3.3mm;
+  left: 23.9mm;
+}
+
+/* Alkohol checkbox */
+.zapach-alkohol {
+  position: absolute;
+  top: 7.8mm;
+  left: 23.9mm;
+}
+
+/* Inne checkbox */
+.zapach-inne {
+  position: absolute;
+  top: 12.3mm;
+  left: 23.9mm;
+}
+
+/* Textarea for inne */
+.zapach-textarea {
+  position: absolute;
+  top: 12.3mm;
+  left: 6mm;
+  width: 17mm;
+  height: 3.5mm;
+}
+
+/* Hide border when inne is not selected */
+.zapach-textarea.hide-border {
+  border: 1px solid transparent !important;
+}
+
+/* Show red border when "inne" is selected */
+.zapach-textarea.inne-selected {
+  border: 1px solid red !important;
+}
+
+/* Hide red border when "inne" is selected AND textarea is filled */
+.zapach-textarea.inne-selected.has-content {
+  border: 1px solid transparent !important;
+}

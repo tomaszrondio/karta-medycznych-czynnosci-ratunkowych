@@ -1,0 +1,34 @@
+/* Jama Brzuszna container */
+.jama-brzuszna-container {
+  position: absolute;
+  top: 115mm;
+  left: 58mm;
+  width: 24mm;
+  height: 36mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+.jama-w-normie {
+  position: absolute;
+  top: 4.8mm;
+  left: 18mm;
+}
+
+.jama-bolesnosc-palpacyjna {
+  position: absolute;
+  top: 12.3mm;
+  left: 18mm;
+}
+
+.jama-brak-perystaltyki {
+  position: absolute;
+  top: 19.8mm;
+  left: 18mm;
+}
+
+.jama-objawy-otrzewnowe {
+  position: absolute;
+  top: 27.9mm;
+  left: 18mm;
+}

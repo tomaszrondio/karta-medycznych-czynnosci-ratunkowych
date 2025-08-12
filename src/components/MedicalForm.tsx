@@ -12,6 +12,15 @@ import CisnienieTetnicze from './sections/CisnienieTetnicze';
 import Tetno from './sections/Tetno';
 import Objawy from './sections/Objawy';
 import Inne from './sections/Inne';
+import Skora from './sections/Skora';
+import JamaBrzuszna from './sections/JamaBrzuszna';
+import OcenaPsychoRuch from './sections/OcenaPsychoRuch';
+import TonySerca from './sections/TonySerca';
+import NiedowladPorazenie from './sections/NiedowladPorazenie';
+import ZapachZUst from './sections/ZapachZUst';
+import PoziomGlukozy from './sections/PoziomGlukozy';
+import EkG from './sections/EkG';
+import Opis from './sections/Opis';
 
 const MedicalForm: React.FC = () => {
   const [scale, setScale] = useState(1);
@@ -61,6 +70,15 @@ const MedicalForm: React.FC = () => {
           <Tetno />
           <Objawy />
           <Inne />
+          <Skora />
+          <JamaBrzuszna />
+          <OcenaPsychoRuch />
+          <TonySerca />
+          <NiedowladPorazenie />
+          <ZapachZUst />
+          <PoziomGlukozy />
+          <EkG />
+          <Opis />
         </div>
       </div>
       

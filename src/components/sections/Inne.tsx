@@ -11,6 +11,7 @@ const Inne: React.FC = () => {
   
   // Third row: Only T checkbox
   const [inne3, setInne3] = useState<boolean>(false);
+  
 
   const handleCoazaChange = (value: boolean) => {
     setCoaza(coaza === value ? null : value);
@@ -57,6 +58,7 @@ const Inne: React.FC = () => {
           onChange={handleInne3Change}
         />
       </div>
+
     </div>
   );
 };
