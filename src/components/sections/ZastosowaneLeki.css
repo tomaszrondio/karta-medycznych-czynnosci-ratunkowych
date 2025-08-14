@@ -1,0 +1,19 @@
+/* Zastosowane Leki container */
+.zastosowane-leki-container {
+  position: absolute;
+  top: 204mm;
+  left: 113mm;
+  width: 90mm;
+  height: 44mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+/* Simple textarea */
+.zastosowane-leki-textarea {
+  position: absolute;
+  top: 3mm;
+  left: 1mm;
+  width: 89mm;
+  height: 40mm;
+}

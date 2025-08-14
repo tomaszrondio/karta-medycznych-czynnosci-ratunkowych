@@ -1,0 +1,45 @@
+/* Rozpoznanie container */
+.rozpoznanie-container {
+  position: absolute;
+  top: 192mm;
+  left: 0mm;
+  width: 203mm;
+  height: 8mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+/* Opis textarea */
+.rozpoznanie-opis-textarea {
+  position: absolute;
+  top: 0mm;
+  left: 0mm;
+  width: 157mm;
+  height: 7mm;
+  text-indent: 8mm;
+}
+
+/* Three small text inputs */
+.rozpoznanie-input1 {
+  position: absolute;
+  top: 2mm;
+  left: 159mm;
+  width: 13mm;
+  height: 4mm;
+}
+
+.rozpoznanie-input2 {
+    position: absolute;
+    top: 2mm;
+    left: 173.5mm;
+    width: 13mm;
+  height: 4mm;
+}
+
+.rozpoznanie-input3 {
+    position: absolute;
+    top: 2mm;
+    left: 188mm;
+    width: 13.3mm;
+  height: 4mm;
+}

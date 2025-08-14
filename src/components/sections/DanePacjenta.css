@@ -1,0 +1,82 @@
+/* Dane Pacjenta container */
+.dane-pacjenta-container {
+  position: absolute;
+  top: 252mm;
+  left: 0mm;
+  width: 66mm;
+  height: 41mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+/* Imię */
+.dane-imie {
+  position: absolute;
+  top: 4mm;
+  left: 9mm;
+  width: 55mm;
+  height: 4mm;
+}
+
+/* Nazwisko */
+.dane-nazwisko {
+  position: absolute;
+  top: 10mm;
+  left: 16mm;
+  width: 48mm;
+  height: 4mm;
+}
+
+/* Adres zamieszkania */
+.dane-adres {
+  position: absolute;
+  top: 16.5mm;
+  left: 31mm;
+  width: 33mm;
+  height: 4mm;
+}
+
+/* ul. */
+.dane-ulica {
+  position: absolute;
+  top: 23mm;
+  left: 5mm;
+  width: 36mm;
+  height: 4mm;
+}
+
+/* nr. */
+.dane-numer {
+  position: absolute;
+  top: 23mm;
+  left: 46mm;
+  width: 8mm;
+  height: 4mm;
+}
+
+/* m. */
+.dane-mieszkanie {
+  position: absolute;
+  top: 23mm;
+  left: 58mm;
+  width: 7mm;
+  height: 4mm;
+}
+
+/* Rodz. i nr. dok. tożsamości */
+.dane-dokument {
+  position: absolute;
+  top: 29.5mm;
+  left: 42mm;
+  width: 23mm;
+  height: 4mm;
+}
+
+/* Additional input below */
+.dane-additional {
+  position: absolute;
+  top: 35.5mm;
+  left: 2mm;
+  width: 62mm;
+  height: 4mm;
+}

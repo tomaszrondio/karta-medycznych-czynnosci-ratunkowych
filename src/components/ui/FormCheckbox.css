@@ -5,12 +5,23 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   background: transparent;
-  border: 1px solid red;
   position: relative;
   cursor: pointer;
 }
 
-.form-checkbox.row-selected {
+.form-checkbox.required {
+  border: 1px solid red;
+}
+
+.form-checkbox.not-required {
+  border: 1px solid black;
+}
+
+.form-checkbox.required.row-selected {
+  border: 1px solid transparent !important;
+}
+
+.form-checkbox.not-required.row-selected {
   border: 1px solid transparent !important;
 }
 

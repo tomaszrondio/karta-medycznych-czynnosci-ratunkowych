@@ -21,6 +21,11 @@ import ZapachZUst from './sections/ZapachZUst';
 import PoziomGlukozy from './sections/PoziomGlukozy';
 import EkG from './sections/EkG';
 import Opis from './sections/Opis';
+import Rozpoznanie from './sections/Rozpoznanie';
+import PostepowanieCzynnosci from './sections/PostepowanieCzynnosci';
+import ZastosowaneLeki from './sections/ZastosowaneLeki';
+import ZaleceniaUwagi from './sections/ZaleceniaUwagi';
+import DanePacjenta from './sections/DanePacjenta';
 
 const MedicalForm: React.FC = () => {
   const [scale, setScale] = useState(1);
@@ -79,6 +84,11 @@ const MedicalForm: React.FC = () => {
           <PoziomGlukozy />
           <EkG />
           <Opis />
+          <Rozpoznanie />
+          <PostepowanieCzynnosci />
+          <ZastosowaneLeki />
+          <ZaleceniaUwagi />
+          <DanePacjenta />
         </div>
       </div>
       

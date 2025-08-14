@@ -5,9 +5,10 @@ interface FormTextareaProps {
   className: string;
   placeholder?: string;
   defaultValue?: string;
+  isRequired?: boolean;
 }
 
-const FormTextarea: React.FC<FormTextareaProps> = ({ className, placeholder, defaultValue }) => {
+const FormTextarea: React.FC<FormTextareaProps> = ({ className, placeholder, defaultValue, isRequired = true }) => {
   const [value, setValue] = useState(defaultValue || '');
   const [fontSize, setFontSize] = useState(16);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -39,7 +40,7 @@ const FormTextarea: React.FC<FormTextareaProps> = ({ className, placeholder, def
   return (
     <textarea
       ref={textareaRef}
-      className={`form-textarea ${className} ${value.trim() ? 'has-content' : ''}`}
+      className={`form-textarea ${className} ${value.trim() ? 'has-content' : ''} ${isRequired ? 'required' : 'not-required'}`}
       value={value}
       onChange={handleChange}
       placeholder={placeholder}

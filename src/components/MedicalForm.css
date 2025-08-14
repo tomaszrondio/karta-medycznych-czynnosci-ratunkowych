@@ -23,7 +23,6 @@
 .wrapper input[type="radio"],
 .wrapper select {
   position: absolute;
-  border: 1px solid red;
   background: transparent;
   font-size: 16px;
   font-family: Arial, sans-serif;

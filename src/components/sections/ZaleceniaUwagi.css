@@ -1,0 +1,19 @@
+/* Zalecenia Uwagi container */
+.zalecenia-uwagi-container {
+  position: absolute;
+  top: 236mm;
+  left: 0mm;
+  width: 112mm;
+  height: 12mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+/* Simple textarea */
+.zalecenia-uwagi-textarea {
+  position: absolute;
+  top: 4mm;
+  left: 0.3mm;
+  width: 111mm;
+  height: 7mm;
+}

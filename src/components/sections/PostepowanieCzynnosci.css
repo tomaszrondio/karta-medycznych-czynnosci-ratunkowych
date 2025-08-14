@@ -1,0 +1,155 @@
+/* Postepowanie z Pacjentem - Czynnosci container */
+.postepowanie-czynnosci-container {
+  position: absolute;
+  top: 204mm;
+  left: 0mm;
+  width: 112mm;
+  height: 31mm;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Optional: for visual debugging */
+}
+
+/* Column 1 checkboxes */
+.postepowanie-checkbox1 {
+  position: absolute;
+  top: 3.3mm;
+  left: 21.5mm;
+}
+
+.postepowanie-checkbox2 {
+  position: absolute;
+  top: 7.9mm;
+  left: 21.5mm;
+}
+
+.postepowanie-checkbox3 {
+  position: absolute;
+  top: 12.5mm;
+  left: 21.5mm;
+}
+
+.postepowanie-checkbox4 {
+  position: absolute;
+  top: 17.1mm;
+  left: 21.5mm;
+}
+
+.postepowanie-checkbox5 {
+  position: absolute;
+  top: 21.7mm;
+  left: 21.5mm;
+}
+
+.postepowanie-checkbox21 {
+  position: absolute;
+  top: 26.3mm;
+  left: 21.5mm;
+}
+
+/* Column 2 checkboxes */
+.postepowanie-checkbox6 {
+  position: absolute;
+  top: 3.8mm;
+  left: 49.2mm;
+}
+
+.postepowanie-checkbox7 {
+  position: absolute;
+  top: 8.4mm;
+  left: 49.2mm;
+}
+
+.postepowanie-checkbox8 {
+  position: absolute;
+  top: 13mm;
+  left: 49.2mm;
+}
+
+.postepowanie-checkbox9 {
+  position: absolute;
+  top: 17.6mm;
+  left: 49.2mm;
+}
+
+.postepowanie-checkbox10 {
+  position: absolute;
+  top: 22.2mm;
+  left: 49.2mm;
+}
+
+.postepowanie-checkbox22 {
+  position: absolute;
+     top: 26.5mm;
+    left: 49mm;
+}
+
+/* Column 3 checkboxes */
+.postepowanie-checkbox11 {
+  position: absolute;
+  top: 4.3mm;
+  left: 76.3mm;
+}
+
+.postepowanie-checkbox12 {
+  position: absolute;
+  top: 8.9mm;
+  left: 76.3mm;
+}
+
+.postepowanie-checkbox13 {
+  position: absolute;
+  top: 13.5mm;
+  left: 76.3mm;
+}
+
+.postepowanie-checkbox14 {
+  position: absolute;
+      top: 17.6mm;
+  left: 76.3mm;
+}
+
+.postepowanie-checkbox15 {
+  position: absolute;
+  top: 22.4mm;
+  left: 76.3mm;
+}
+
+/* Column 4 checkboxes */
+.postepowanie-checkbox16 {
+  position: absolute;
+  top: 4.3mm;
+  left: 105.6mm;
+}
+
+.postepowanie-checkbox17 {
+  position: absolute;
+  top: 8.9mm;
+  left: 105.6mm;
+}
+
+.postepowanie-checkbox18 {
+  position: absolute;
+  top: 13.5mm;
+  left: 105.6mm;
+}
+
+.postepowanie-checkbox19 {
+  position: absolute;
+  top: 18.1mm;
+  left: 105.6mm;
+}
+
+.postepowanie-checkbox20 {
+    position: absolute;
+    top: 22.6mm;
+    left: 105.6mm;
+}
+
+/* Inne textarea */
+.postepowanie-inne-textarea {
+  position: absolute;
+  top: 27mm;
+  left: 61mm;
+  width: 49mm;
+  height: 3mm;
+}

@@ -6,3 +6,19 @@
 .form-textarea.has-content {
   border: none !important;
 }
+
+.form-textarea.required {
+  border: 1px solid red !important;
+}
+
+.form-textarea.not-required {
+  border: 1px solid black !important;
+}
+
+.form-textarea.required.has-content {
+  border: none !important;
+}
+
+.form-textarea.not-required.has-content {
+  border: none !important;
+}
