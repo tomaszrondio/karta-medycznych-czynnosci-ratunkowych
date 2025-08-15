@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './MedicalForm.css';
 import backgroundImage from '../assets/background.png';
+import ConfirmationModal from './ui/ConfirmationModal';
 import HeaderFields from './sections/HeaderFields';
 import Wywiad from './sections/Wywiad';
 import MiejsceZdarzenia from './sections/MiejsceZdarzenia';
@@ -36,6 +37,7 @@ import HumanDiagram from './sections/HumanDiagram';
 
 const MedicalForm: React.FC = () => {
   const [scale, setScale] = useState(1);
+  const [showClearModal, setShowClearModal] = useState(false);
 
   useEffect(() => {
     const calculateScale = () => {
@@ -58,6 +60,18 @@ const MedicalForm: React.FC = () => {
 
   const handlePrint = () => {
     window.print();
+  };
+
+  const handleClearForm = () => {
+    setShowClearModal(true);
+  };
+
+  const confirmClearForm = () => {
+    window.location.reload();
+  };
+
+  const cancelClearForm = () => {
+    setShowClearModal(false);
   };
 
   return (
@@ -107,10 +121,23 @@ const MedicalForm: React.FC = () => {
       </div>
       
       <div className="print-button-container no-print">
+        <button onClick={handleClearForm} className="clear-button">
+          Wyczyść
+        </button>
         <button onClick={handlePrint} className="print-button">
           Drukuj formularz
         </button>
       </div>
+      
+      <ConfirmationModal
+        isOpen={showClearModal}
+        title="Wyczyść formularz"
+        message="Czy na pewno chcesz wyczyścić cały formularz? Wszystkie wprowadzone dane zostaną utracone."
+        confirmText="Wyczyść"
+        cancelText="Anuluj"
+        onConfirm={confirmClearForm}
+        onCancel={cancelClearForm}
+      />
     </>
   );
 };

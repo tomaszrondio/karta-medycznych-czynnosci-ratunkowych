@@ -1,7 +1,7 @@
 {
-  "name": "medical-emergency-form",
+  "name": "karta-medycznych-czynnosci-ratunkowych",
   "version": "1.0.0",
-  "description": "Polish Medical Emergency Form Desktop App",
+  "description": "Karta Medycznych Czynności Ratunkowych Desktop App",
   "main": "public/electron.js",
   "private": true,
   "homepage": "./",
@@ -48,7 +48,7 @@
   },
   "build": {
     "appId": "com.medical.emergency.form",
-    "productName": "Medical Emergency Form",
+    "productName": "Karta Medycznych Czynności Ratunkowych",
     "directories": {
       "output": "dist"
     },

@@ -42,6 +42,9 @@
 .print-button-container {
   margin-top: 20px;
   text-align: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
 }
 
 .print-button {
@@ -56,6 +59,20 @@
 
 .print-button:hover {
   background: #0056b3;
+}
+
+.clear-button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.clear-button:hover {
+  background: #c82333;
 }
 
 @media print {
