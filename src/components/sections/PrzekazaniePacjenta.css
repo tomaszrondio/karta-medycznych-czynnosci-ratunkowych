@@ -1,0 +1,124 @@
+/* Przekazanie pacjenta container */
+.przekazanie-pacjenta-container {
+  position: absolute;
+  top: 274mm;
+  left: 136mm;
+  width: 68mm;
+  height: 19mm;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+/* IP/SOR / innym choice */
+.ipsor-choice {
+  position: absolute;
+  top: 0.2mm;
+  left: 30mm;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.ipsor-text,
+.innym-text {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.slash-text {
+  margin: 0 5px;
+}
+
+/* When option is selected - make it invisible */
+.ipsor-text.selected,
+.innym-text.selected {
+  color: transparent;
+}
+
+/* When option is not selected but other is selected - show fake strikethrough */
+.ipsor-text.strikethrough,
+.innym-text.strikethrough {
+  color: transparent;
+  position: relative;
+}
+
+.ipsor-text.strikethrough::after,
+.innym-text.strikethrough::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: black;
+}
+
+/* Hide slash when something is selected */
+.ipsor-choice:has(.selected) .slash-text {
+  color: transparent;
+}
+
+/* Print styles - remove all effects when printing */
+@media print {
+  .ipsor-text.selected,
+  .innym-text.selected {
+    color: black !important;
+  }
+  
+  .ipsor-text.strikethrough,
+  .innym-text.strikethrough {
+    text-decoration: none !important;
+    color: black !important;
+  }
+}
+
+/* First row - Przekazanie pacjenta w IP/SOR / innym */
+.data1-input {
+  position: absolute;
+  top: 5mm;
+  left: 6mm;
+  width: 25mm;
+  height: 3.5mm;
+}
+
+.godz1-input {
+  position: absolute;
+  top: 5mm;
+  left: 38mm;
+  width: 7mm;
+  height: 3.5mm;
+}
+
+.min1-input {
+  position: absolute;
+  top: 5mm;
+  left: 50mm;
+  width: 7mm;
+  height: 3.5mm;
+}
+
+/* Second row - Stwierdzenie zgonu / odstąpienie od med. czynności rat. */
+.data2-input {
+  position: absolute;
+  top: 15mm;
+  left: 6mm;
+  width: 25mm;
+  height: 3.5mm;
+}
+
+.godz2-input {
+  position: absolute;
+  top: 15mm;
+  left: 38mm;
+  width: 7mm;
+  height: 3.5mm;
+}
+
+.min2-input {
+  position: absolute;
+  top: 15mm;
+  left: 50mm;
+  width: 7mm;
+  height: 3.5mm;
+}

@@ -1,0 +1,28 @@
+/* Podpis i pieczątka kierownika ZRM container */
+.podpis-kierownika-container {
+  position: absolute;
+  top: 274mm;
+  left: 67mm;
+  width: 68mm;
+  height: 19mm;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+/* Zespół (S/P) input - small input in top right */
+.zespol-input {
+  position: absolute;
+  top: 2mm;
+  right: 0mm;
+  width: 13mm;
+  height: 6mm;
+}
+
+/* Data udzielenia pomocy input - above dotted line */
+.data-pomocy-input {
+  position: absolute;
+  top: 14mm;
+  left: 33mm;
+  width: 30mm;
+  height: 4mm;
+}

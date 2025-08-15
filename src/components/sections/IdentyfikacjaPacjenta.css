@@ -1,0 +1,43 @@
+/* Identyfikacja Pacjenta container */
+.identyfikacja-pacjenta-container {
+  position: absolute;
+  top: 252mm;
+  left: 67mm;
+  width: 68mm;
+  height: 21mm;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+/* Ident. NFZ input (3 digits) */
+.ident-nfz-input {
+  top: 4mm;
+  left: 1mm;
+  width: 15mm;
+}
+
+/* Data urodzenia inputs */
+.data-year-input {
+  top: 4mm;
+  left: 21mm;
+  width: 14mm;
+}
+
+.data-month-input {
+  top: 4mm;
+  left: 42.4mm;
+  width: 8mm;
+}
+
+.data-day-input {
+  top: 4mm;
+  left: 53.4mm;
+  width: 8mm;
+}
+
+/* PESEL input (11 digits) */
+.pesel-input {
+  top: 13.8mm;
+  left: 1mm;
+  width: 66mm;
+}

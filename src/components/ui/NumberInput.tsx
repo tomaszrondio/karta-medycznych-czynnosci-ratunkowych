@@ -7,9 +7,10 @@ interface NumberInputProps {
   onChange: (value: string) => void;
   maxLength?: number;
   inputClassName?: string;
+  isRequired?: boolean;
 }
 
-const NumberInput: React.FC<NumberInputProps> = ({ className, value, onChange, maxLength = 2, inputClassName }) => {
+const NumberInput: React.FC<NumberInputProps> = ({ className, value, onChange, maxLength = 2, inputClassName, isRequired = true }) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value.replace(/[^0-9]/g, ''); // Only allow numbers
     if (newValue.length <= maxLength) {
@@ -23,7 +24,7 @@ const NumberInput: React.FC<NumberInputProps> = ({ className, value, onChange, m
         type="text"
         value={value}
         onChange={handleChange}
-        className={`number-input ${value ? 'filled' : ''} ${inputClassName || ''}`}
+        className={`number-input ${value ? 'filled' : ''} ${inputClassName || ''} ${isRequired ? 'required' : 'not-required'}`}
         maxLength={maxLength}
       />
     </div>

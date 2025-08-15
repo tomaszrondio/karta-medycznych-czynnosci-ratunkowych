@@ -1,0 +1,50 @@
+/* IP/SOR Choice container */
+.ipsor-choice-container {
+  position: absolute;
+  top: 252mm;
+  left: 136mm;
+  width: 68mm;
+  height: 21mm;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ipsor-text,
+.innym-text {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.slash-text {
+  margin: 0 2px;
+}
+
+/* When option is selected - make both invisible but keep layout */
+.ipsor-text.selected,
+.innym-text.selected {
+  color: transparent;
+}
+
+/* When option is not selected but other is selected - add strikethrough */
+.ipsor-text.strikethrough,
+.innym-text.strikethrough {
+  text-decoration: line-through;
+  color: black;
+}
+
+/* Print styles - remove all effects when printing */
+@media print {
+  .ipsor-text.selected,
+  .innym-text.selected {
+    color: black !important;
+  }
+  
+  .ipsor-text.strikethrough,
+  .innym-text.strikethrough {
+    text-decoration: none !important;
+    color: black !important;
+  }
+}

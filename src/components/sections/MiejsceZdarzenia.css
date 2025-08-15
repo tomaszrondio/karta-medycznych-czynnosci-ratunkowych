@@ -50,7 +50,8 @@
   height: 3.5mm;
 }
 
-/* Remove red border when any checkbox is selected */
+/* Remove red border and background when any checkbox is selected */
 .miejsce-container.has-selection .form-checkbox {
   border: none !important;
+  background-color: transparent !important;
 }

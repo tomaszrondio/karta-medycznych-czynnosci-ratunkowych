@@ -33,11 +33,13 @@ const Inne: React.FC = () => {
           className={`coaza-t ${coaza !== null ? 'row-selected' : ''}`}
           checked={coaza === true}
           onChange={() => handleCoazaChange(true)}
+          isRequired={false}
         />
         <FormCheckbox
           className={`coaza-n ${coaza !== null ? 'row-selected' : ''}`}
           checked={coaza === false}
           onChange={() => handleCoazaChange(false)}
+            isRequired={false}
         />
       </div>
 
@@ -47,6 +49,7 @@ const Inne: React.FC = () => {
           className={`inne2-t ${inne2 ? 'row-selected' : ''}`}
           checked={inne2}
           onChange={handleInne2Change}
+            isRequired={false}
         />
       </div>
 
@@ -56,6 +59,7 @@ const Inne: React.FC = () => {
           className={`inne3-t ${inne3 ? 'row-selected' : ''}`}
           checked={inne3}
           onChange={handleInne3Change}
+            isRequired={false}
         />
       </div>
 

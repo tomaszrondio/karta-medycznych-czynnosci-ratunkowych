@@ -5,7 +5,6 @@
 .number-input {
   width: 8.6mm;
   height: 4.5mm;
-  border: 1px solid red;
   background: transparent;
   text-align: left;
   font-size: 14px !important;
@@ -19,12 +18,53 @@
   padding-top: 0.1mm !important;
 }
 
+.number-input.required {
+  border: 1px solid transparent;
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+@media print {
+  .number-input.required {
+    background-color: transparent !important;
+  }
+}
+
+.number-input.not-required {
+  border: 1px solid transparent;
+  background-color: rgba(255, 255, 0, 0.5);
+}
+
+@media print {
+  .number-input.not-required {
+    background-color: transparent !important;
+  }
+}
+
 /* 3-digit number input variant */
 .number-input[maxlength="3"] {
   width: 12mm;
   letter-spacing: 1.7mm;
 }
 
+/* 4-digit number input variant */
+.number-input[maxlength="4"] {
+  width: 14mm;
+  letter-spacing: 1.6mm;
+}
+
+/* 11-digit number input variant */
+.number-input[maxlength="11"] {
+  width: 80mm;
+  letter-spacing: 1.5mm;
+}
+
 .number-input.filled {
   border: 1px solid transparent;
+  background-color: transparent !important;
 }
+
+.number-input.required.filled {
+  border: 1px solid transparent;
+  background-color: transparent !important;
+}
+

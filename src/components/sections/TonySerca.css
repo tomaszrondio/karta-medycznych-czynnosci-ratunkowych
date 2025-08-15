@@ -38,17 +38,27 @@ top: 13.6mm;
   height: 3.5mm;
 }
 
-/* Hide border when something other than "inne" is selected */
+/* Hide border and background when something other than "inne" is selected */
 .tony-serca-textarea.hide-border {
   border: 1px solid transparent !important;
+  background-color: transparent !important;
 }
 
-/* Show red border when "inne" is selected but not filled */
+/* Show red background when "inne" is selected but not filled */
 .tony-serca-textarea.inne-selected {
-  border: 1px solid red !important;
+  border: 1px solid transparent !important;
+  background-color: rgba(255, 0, 0, 0.4) !important;
 }
 
-/* Hide red border when "inne" is selected AND textarea is filled */
+@media print {
+  .tony-serca-textarea.inne-selected {
+    background-color: transparent !important;
+  }
+}
+
+/* Hide red background when "inne" is selected AND textarea is filled */
 .tony-serca-textarea.inne-selected.has-content {
   border: 1px solid transparent !important;
+  background-color: transparent !important;
 }
+

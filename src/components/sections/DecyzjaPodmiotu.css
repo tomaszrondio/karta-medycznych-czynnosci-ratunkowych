@@ -1,0 +1,42 @@
+/* Decyzja podmiotu leczniczego container */
+.decyzja-podmiotu-container {
+  position: absolute;
+  top: 252mm;
+  left: 136mm;
+  width: 68mm;
+  height: 21mm;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+/* Przyjęcie pacjenta checkbox */
+.przyjecie-checkbox {
+  position: absolute;
+  top: 3.6mm;
+  left: 2.2mm;
+}
+
+/* Odmowa przyjęcia checkbox */
+.odmowa-checkbox {
+  position: absolute;
+  top: 3.6mm;
+  left: 37.5mm;
+}
+
+/* Oznaczenie IP/SOR textarea */
+.oznaczenie-ipsor-textarea {
+  position: absolute;
+  top: 9mm;
+  left: 1mm;
+  width: 27mm;
+  height: 7mm;
+}
+
+/* Oznaczenie osoby przyjmującej textarea */
+.oznaczenie-osoby-textarea {
+  position: absolute;
+  top: 9mm;
+  left: 31mm;
+  width: 34mm;
+  height: 7mm;
+}

@@ -1,0 +1,22 @@
+.large-number-input {
+  font-size: 18px !important;
+  letter-spacing: 2.5mm !important;
+  height: 6mm !important;
+}
+
+/* Specific widths for different digit lengths */
+.large-number-input[maxlength="2"] {
+  width: 10mm !important;
+}
+
+.large-number-input[maxlength="3"] {
+  width: 15mm !important;
+}
+
+.large-number-input[maxlength="4"] {
+  width: 20mm !important;
+}
+
+.large-number-input[maxlength="11"] {
+  width: 57mm !important;
+}
