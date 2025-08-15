@@ -30,6 +30,9 @@ import IdentyfikacjaPacjenta from './sections/IdentyfikacjaPacjenta';
 import PodpisKierownika from './sections/PodpisKierownika';
 import DecyzjaPodmiotu from './sections/DecyzjaPodmiotu';
 import PrzekazaniePacjenta from './sections/PrzekazaniePacjenta';
+import ObrazeniaCentrum from './sections/ObrazeniaCentrum';
+import ObrazeniaRightColumn from './sections/ObrazeniaRightColumn';
+import HumanDiagram from './sections/HumanDiagram';
 
 const MedicalForm: React.FC = () => {
   const [scale, setScale] = useState(1);
@@ -97,6 +100,9 @@ const MedicalForm: React.FC = () => {
           <PodpisKierownika />
           <DecyzjaPodmiotu />
           <PrzekazaniePacjenta />
+          <ObrazeniaCentrum />
+          <ObrazeniaRightColumn />
+          <HumanDiagram />
         </div>
       </div>
       

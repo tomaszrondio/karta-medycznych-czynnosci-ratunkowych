@@ -1,0 +1,70 @@
+/* Obrażenia anatomiczne kwalifikujące do centrum urazowego container */
+.obrazenia-centrum-container {
+  position: absolute;
+  top: 99mm;
+  left: 119mm;
+  width: 84mm;
+  height: 15mm;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+/* Left column checkboxes - half size */
+.obrazenia-checkbox1 {
+  position: absolute;
+  top: 4mm;
+  left: 0.3mm;
+  width: 2.75mm !important;
+  height: 1.75mm !important;
+}
+
+.obrazenia-checkbox2 {
+  position: absolute;
+  top: 8.8mm;
+  left: 0.3mm;
+  width: 2.75mm !important;
+  height: 1.75mm !important;
+}
+
+.obrazenia-checkbox3 {
+  position: absolute;
+  top: 11.6mm;
+  left: 0.3mm;
+  width: 2.75mm !important;
+  height: 1.75mm !important;
+}
+
+/* Right column checkboxes - half size */
+.obrazenia-checkbox4 {
+  position: absolute;
+  top: 2.3mm;
+  left: 44mm;
+  width: 2.75mm !important;
+  height: 1.75mm !important;
+}
+
+.obrazenia-checkbox5 {
+  position: absolute;
+  top: 6.2mm;
+  left: 44mm;
+  width: 2.75mm !important;
+  height: 1.75mm !important;
+}
+
+.obrazenia-checkbox6 {
+  position: absolute;
+  top: 10.6mm;
+  left: 44mm;
+  width: 2.75mm !important;
+  height: 1.75mm !important;
+}
+
+/* Half size X mark for all obrazenia checkboxes */
+.obrazenia-checkbox1:checked::before,
+.obrazenia-checkbox2:checked::before,
+.obrazenia-checkbox3:checked::before,
+.obrazenia-checkbox4:checked::before,
+.obrazenia-checkbox5:checked::before,
+.obrazenia-checkbox6:checked::before {
+  font-size: 1.75mm !important;
+}
