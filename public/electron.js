@@ -2,6 +2,16 @@ const { app, BrowserWindow, Menu, ipcMain } = require('electron');
 const path = require('path');
 const settings = require('electron-settings');
 
+// Configure electron-settings to use userData directory
+try {
+  settings.configure({
+    dir: app.getPath('userData')
+  });
+  console.log('Electron-settings configured with userData dir:', app.getPath('userData'));
+} catch (error) {
+  console.error('Error configuring electron-settings:', error);
+}
+
 let mainWindow;
 
 function createWindow() {
@@ -112,19 +122,24 @@ ipcMain.on('print-form', () => {
 // Handle electron-settings operations
 ipcMain.handle('store-get', async (event, key, defaultValue) => {
   try {
-    return await settings.get(key, defaultValue);
+    console.log('Getting setting:', key);
+    const value = await settings.get(key, defaultValue);
+    console.log('Retrieved setting:', key, '=', value);
+    return value;
   } catch (error) {
-    console.error('Error getting setting:', error);
+    console.error('Error getting setting:', key, error);
     return defaultValue;
   }
 });
 
 ipcMain.handle('store-set', async (event, key, value) => {
   try {
+    console.log('Setting:', key, '=', value);
     await settings.set(key, value);
+    console.log('Successfully set setting:', key);
     return true;
   } catch (error) {
-    console.error('Error setting value:', error);
+    console.error('Error setting value:', key, error);
     return false;
   }
 });

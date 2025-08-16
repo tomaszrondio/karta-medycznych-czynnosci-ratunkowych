@@ -27,47 +27,64 @@ class UniversalStore implements StoreInterface {
            window.electronAPI.isElectron === true;
   }
 
+  private async testElectronStore(): Promise<boolean> {
+    if (!this.isElectron() || !window.electronStore) {
+      return false;
+    }
+    
+    try {
+      // Test if electron store is working by trying to get a test value
+      await window.electronStore.get('__test__', null);
+      return true;
+    } catch (error) {
+      console.warn('Electron store test failed, falling back to localStorage:', error);
+      return false;
+    }
+  }
+
   async get(key: string, defaultValue?: any): Promise<any> {
     const prefixedKey = `kmcr_${key}`;
     
-    if (this.isElectron() && window.electronStore) {
+    // Try electron-settings first if available and working
+    if (await this.testElectronStore()) {
       try {
-        return await window.electronStore.get(prefixedKey, defaultValue);
+        return await window.electronStore!.get(prefixedKey, defaultValue);
       } catch (error) {
-        console.warn('Error reading from electron-settings:', error);
+        console.warn('Error reading from electron-settings, falling back to localStorage:', error);
+      }
+    }
+    
+    // Fallback to localStorage
+    try {
+      const item = localStorage.getItem(prefixedKey);
+      if (item === null) {
         return defaultValue;
       }
-    } else {
-      // Fallback to localStorage
-      try {
-        const item = localStorage.getItem(prefixedKey);
-        if (item === null) {
-          return defaultValue;
-        }
-        return JSON.parse(item);
-      } catch (error) {
-        console.warn('Error reading from localStorage:', error);
-        return defaultValue;
-      }
+      return JSON.parse(item);
+    } catch (error) {
+      console.warn('Error reading from localStorage:', error);
+      return defaultValue;
     }
   }
 
   async set(key: string, value: any): Promise<void> {
     const prefixedKey = `kmcr_${key}`;
     
-    if (this.isElectron() && window.electronStore) {
+    // Try electron-settings first if available and working
+    if (await this.testElectronStore()) {
       try {
-        await window.electronStore.set(prefixedKey, value);
+        await window.electronStore!.set(prefixedKey, value);
+        return; // Success, no need to use localStorage
       } catch (error) {
-        console.warn('Error writing to electron-settings:', error);
+        console.warn('Error writing to electron-settings, falling back to localStorage:', error);
       }
-    } else {
-      // Fallback to localStorage
-      try {
-        localStorage.setItem(prefixedKey, JSON.stringify(value));
-      } catch (error) {
-        console.warn('Error writing to localStorage:', error);
-      }
+    }
+    
+    // Fallback to localStorage
+    try {
+      localStorage.setItem(prefixedKey, JSON.stringify(value));
+    } catch (error) {
+      console.warn('Error writing to localStorage:', error);
     }
   }
 }
