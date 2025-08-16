@@ -8,7 +8,22 @@
       "Bash(mkdir:*)",
       "Bash(npm run build:*)",
       "Bash(npx electron-builder:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(npm run:*)",
+      "Bash(rm:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(open \"/Users/tomaszrondio/Desktop/projekty/MedicalDataForm/dist/mac/Karta Medycznych Czynności Ratunkowych.app\")",
+      "Bash(\"/Users/tomaszrondio/Desktop/projekty/MedicalDataForm/dist/mac/Karta Medycznych Czynności Ratunkowych.app/Contents/MacOS/Karta Medycznych Czynności Ratunkowych\")",
+      "Bash(console:*)",
+      "Bash(ELECTRON_ENABLE_LOGGING=1 \"/Users/tomaszrondio/Desktop/projekty/MedicalDataForm/dist/mac/Karta Medycznych Czynności Ratunkowych.app/Contents/MacOS/Karta Medycznych Czynności Ratunkowych\")",
+      "Bash(pkill:*)",
+      "Bash(ls:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git filter-branch:*)",
+      "Bash(git stash:*)"
     ],
     "deny": []
   }

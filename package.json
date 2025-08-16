@@ -7,6 +7,7 @@
   "homepage": "./",
   "author": "Medical Form App",
   "dependencies": {
+    "electron-settings": "^4.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -20,7 +21,10 @@
     "electron": "electron .",
     "electron-dev": "ELECTRON_IS_DEV=true electron .",
     "electron-pack": "electron-builder",
-    "preelectron-pack": "npm run build"
+    "electron-pack-all": "electron-builder --mac --win",
+    "preelectron-pack": "npm run build",
+    "postelectron-pack": "rm -rf dist/win-unpacked",
+    "postelectron-pack-all": "rm -rf dist/win-unpacked && cd dist/mac && zip -r '../Karta-Medycznych-Czynnosci-Ratunkowych-mac.zip' 'Karta Medycznych Czynności Ratunkowych.app'"
   },
   "eslintConfig": {
     "extends": [
@@ -43,7 +47,7 @@
   "devDependencies": {
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
-    "electron": "^28.0.0",
+    "electron": "^22.3.27",
     "electron-builder": "^24.13.3"
   },
   "build": {
@@ -55,13 +59,25 @@
     "files": [
       "build/**/*",
       "public/electron.js",
+      "public/preload.js",
+      "package.json",
       "node_modules/**/*"
     ],
     "mac": {
-      "category": "public.app-category.medical"
+      "category": "public.app-category.medical",
+      "identity": null,
+      "icon": "src/assets/icon.png",
+      "target": {
+        "target": "dir",
+        "arch": ["x64"]
+      }
     },
     "win": {
-      "target": "nsis"
-    }
+      "target": "portable",
+      "icon": "src/assets/icon.png"
+    },
+    "compression": "store",
+    "generateUpdatesFilesForAllChannels": false,
+    "publish": null
   }
 }
