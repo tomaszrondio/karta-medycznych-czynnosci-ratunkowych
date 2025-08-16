@@ -1,6 +1,6 @@
 const { app, BrowserWindow, Menu, ipcMain } = require('electron');
 const path = require('path');
-const isDev = process.env.ELECTRON_IS_DEV === 'true';
+const settings = require('electron-settings');
 
 let mainWindow;
 
@@ -9,20 +9,20 @@ function createWindow() {
     width: 1200,
     height: 900,
     webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false,
-      enableRemoteModule: true
+      nodeIntegration: false,
+      contextIsolation: true,
+      preload: path.join(__dirname, 'preload.js')
     },
     icon: path.join(__dirname, 'icon.png')
   });
 
-  const startUrl = isDev 
+  const startUrl = process.env.ELECTRON_IS_DEV === 'true'
     ? 'http://localhost:3000' 
     : `file://${path.join(__dirname, '../build/index.html')}`;
 
   mainWindow.loadURL(startUrl);
 
-  if (isDev) {
+  if (process.env.ELECTRON_IS_DEV === 'true') {
     mainWindow.webContents.openDevTools();
   }
 
@@ -106,5 +106,45 @@ ipcMain.on('print-form', () => {
         marginType: 'none'
       }
     });
+  }
+});
+
+// Handle electron-settings operations
+ipcMain.handle('store-get', async (event, key, defaultValue) => {
+  try {
+    return await settings.get(key, defaultValue);
+  } catch (error) {
+    console.error('Error getting setting:', error);
+    return defaultValue;
+  }
+});
+
+ipcMain.handle('store-set', async (event, key, value) => {
+  try {
+    await settings.set(key, value);
+    return true;
+  } catch (error) {
+    console.error('Error setting value:', error);
+    return false;
+  }
+});
+
+ipcMain.handle('store-delete', async (event, key) => {
+  try {
+    await settings.unset(key);
+    return true;
+  } catch (error) {
+    console.error('Error deleting setting:', error);
+    return false;
+  }
+});
+
+ipcMain.handle('store-clear', async () => {
+  try {
+    await settings.reset();
+    return true;
+  } catch (error) {
+    console.error('Error clearing settings:', error);
+    return false;
   }
 });

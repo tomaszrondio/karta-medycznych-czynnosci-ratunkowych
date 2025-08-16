@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './MedicalForm.css';
 import backgroundImage from '../assets/background.png';
 import ConfirmationModal from './ui/ConfirmationModal';
+import ConfigurationModal from './ui/ConfigurationModal';
+import { store, CONFIG_KEYS } from '../utils/store';
 import HeaderFields from './sections/HeaderFields';
 import Wywiad from './sections/Wywiad';
 import MiejsceZdarzenia from './sections/MiejsceZdarzenia';
@@ -38,6 +40,8 @@ import HumanDiagram from './sections/HumanDiagram';
 const MedicalForm: React.FC = () => {
   const [scale, setScale] = useState(1);
   const [showClearModal, setShowClearModal] = useState(false);
+  const [showConfigModal, setShowConfigModal] = useState(false);
+  const [configValue, setConfigValue] = useState('');
 
   useEffect(() => {
     const calculateScale = () => {
@@ -58,6 +62,20 @@ const MedicalForm: React.FC = () => {
     return () => window.removeEventListener('resize', calculateScale);
   }, []);
 
+  useEffect(() => {
+    // Load configuration value on mount
+    const loadConfigValue = async () => {
+      try {
+        const storedValue = await store.get(CONFIG_KEYS.OZNACZENIE_DYSPONENTA, '');
+        setConfigValue(storedValue);
+      } catch (error) {
+        console.warn('Error loading config value:', error);
+      }
+    };
+    
+    loadConfigValue();
+  }, []);
+
   const handlePrint = () => {
     window.print();
   };
@@ -74,8 +92,34 @@ const MedicalForm: React.FC = () => {
     setShowClearModal(false);
   };
 
+  const handleConfigOpen = () => {
+    setShowConfigModal(true);
+  };
+
+  const handleConfigSave = async (value: string) => {
+    try {
+      await store.set(CONFIG_KEYS.OZNACZENIE_DYSPONENTA, value);
+      setConfigValue(value);
+      setShowConfigModal(false);
+      // Force refresh the form to update the HeaderFields component
+      window.location.reload();
+    } catch (error) {
+      console.warn('Error saving config value:', error);
+    }
+  };
+
+  const handleConfigCancel = () => {
+    setShowConfigModal(false);
+  };
+
   return (
     <>
+      <div className="config-button-container no-print">
+        <button onClick={handleConfigOpen} className="config-button" title="Konfiguracja">
+          ⚙️
+        </button>
+      </div>
+      
       <div className="form-container">
         <div 
           className="wrapper" 
@@ -137,6 +181,13 @@ const MedicalForm: React.FC = () => {
         cancelText="Anuluj"
         onConfirm={confirmClearForm}
         onCancel={cancelClearForm}
+      />
+      
+      <ConfigurationModal
+        isOpen={showConfigModal}
+        initialValue={configValue}
+        onSave={handleConfigSave}
+        onCancel={handleConfigCancel}
       />
     </>
   );
