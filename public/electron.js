@@ -2,12 +2,23 @@ const { app, BrowserWindow, Menu, ipcMain } = require('electron');
 const path = require('path');
 const settings = require('electron-settings');
 
-// Configure electron-settings to use userData directory
+// Configure electron-settings to use userData directory with explicit file name
 try {
+  const userDataPath = app.getPath('userData');
   settings.configure({
-    dir: app.getPath('userData')
+    dir: userDataPath,
+    fileName: 'settings.json'
   });
-  console.log('Electron-settings configured with userData dir:', app.getPath('userData'));
+  console.log('Electron-settings configured with userData dir:', userDataPath);
+  console.log('Settings file path:', path.join(userDataPath, 'settings.json'));
+  
+  // Test if we can write to the settings file
+  settings.set('__app_test__', 'test_value').then(() => {
+    console.log('Settings write test successful');
+    settings.unset('__app_test__');
+  }).catch((error) => {
+    console.error('Settings write test failed:', error);
+  });
 } catch (error) {
   console.error('Error configuring electron-settings:', error);
 }

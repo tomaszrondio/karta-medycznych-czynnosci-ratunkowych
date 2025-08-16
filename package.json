@@ -63,6 +63,12 @@
       "package.json",
       "node_modules/**/*"
     ],
+    "asar": {
+      "smartUnpack": true
+    },
+    "asarUnpack": [
+      "node_modules/electron-settings/**/*"
+    ],
     "mac": {
       "category": "public.app-category.medical",
       "identity": null,
@@ -74,7 +80,8 @@
     },
     "win": {
       "target": "portable",
-      "icon": "src/assets/icon.png"
+      "icon": "src/assets/icon.png",
+      "requestedExecutionLevel": "asInvoker"
     },
     "compression": "store",
     "generateUpdatesFilesForAllChannels": false,
