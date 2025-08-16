@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './IdentyfikacjaPacjenta.css';
-import { NumberInput } from '../ui';
+// import { NumberInput } from '../ui';
 import LargeNumberInput from '../ui/LargeNumberInput';
 
 const IdentyfikacjaPacjenta: React.FC = () => {

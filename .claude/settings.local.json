@@ -18,12 +18,7 @@
       "Bash(console:*)",
       "Bash(ELECTRON_ENABLE_LOGGING=1 \"/Users/tomaszrondio/Desktop/projekty/MedicalDataForm/dist/mac/Karta Medycznych Czynności Ratunkowych.app/Contents/MacOS/Karta Medycznych Czynności Ratunkowych\")",
       "Bash(pkill:*)",
-      "Bash(ls:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git push:*)",
-      "Bash(git filter-branch:*)",
-      "Bash(git stash:*)"
+      "Bash(ls:*)"
     ],
     "deny": []
   }

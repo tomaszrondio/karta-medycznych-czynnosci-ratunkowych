@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import './FormTextarea.css';
 
 interface FormTextareaProps {
@@ -13,7 +13,7 @@ const FormTextarea: React.FC<FormTextareaProps> = ({ className, placeholder, def
   const [fontSize, setFontSize] = useState(16);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  const adjustFontSize = () => {
+  const adjustFontSize = useCallback(() => {
     const textarea = textareaRef.current;
     if (!textarea || !value.trim()) return;
 
@@ -27,11 +27,11 @@ const FormTextarea: React.FC<FormTextareaProps> = ({ className, placeholder, def
     }
 
     setFontSize(currentFontSize);
-  };
+  }, [value]);
 
   useEffect(() => {
     adjustFontSize();
-  }, [value]);
+  }, [value, adjustFontSize]);
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setValue(e.target.value);

@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import './UkladOddechowy.css';
-import { FormCheckbox, FormTextarea } from '../ui';
+import { FormCheckbox } from '../ui';
 import NumberInput from '../ui/NumberInput';
 
 const UkladOddechowy: React.FC = () => {
@@ -42,7 +42,7 @@ const UkladOddechowy: React.FC = () => {
     setPSelection(pSelection === selection ? null : selection);
   };
 
-  const adjustFontSize = () => {
+  const adjustFontSize = useCallback(() => {
     const textarea = textareaRef.current;
     if (!textarea || !inneText.trim()) {
       setFontSize(8); // Use fixed 8px font size
@@ -53,11 +53,11 @@ const UkladOddechowy: React.FC = () => {
     const fixedFontSize = 8;
     textarea.style.fontSize = `${fixedFontSize}px`;
     setFontSize(fixedFontSize);
-  };
+  }, [inneText]);
 
   useEffect(() => {
     adjustFontSize();
-  }, [inneText]);
+  }, [inneText, adjustFontSize]);
 
   return (
     <div className="uklad-oddechowy-container">
