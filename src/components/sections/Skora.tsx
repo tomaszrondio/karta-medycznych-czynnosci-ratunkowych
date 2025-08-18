@@ -3,18 +3,19 @@ import './Skora.css';
 import { FormCheckbox } from '../ui';
 
 const Skora: React.FC = () => {
-  // Wyglad subsection - radio-button behavior (only one can be selected)
-  const [wygladSelection, setWygladSelection] = useState<string | null>(null);
+  // Wyglad subsection - independent checkboxes (multiple can be selected)
+  const [wygladWNormie, setWygladWNormie] = useState<boolean>(false);
+  const [wygladBlada, setWygladBlada] = useState<boolean>(false);
+  const [wygladRumien, setWygladRumien] = useState<boolean>(false);
+  const [wygladZazolcenie, setWygladZazolcenie] = useState<boolean>(false);
+  const [wygladSinicaObw, setWygladSinicaObw] = useState<boolean>(false);
+  const [wygladSinicaCentr, setWygladSinicaCentr] = useState<boolean>(false);
   
   // Wilgotnosc subsection - radio-button behavior (only one can be selected)
   const [wilgotnoscSelection, setWilgotnoscSelection] = useState<string | null>(null);
   
   // Temperatura subsection - radio-button behavior (only one can be selected)
   const [temperaturaSelection, setTemperaturaSelection] = useState<string | null>(null);
-
-  const handleWygladSelectionChange = (selection: string) => {
-    setWygladSelection(wygladSelection === selection ? null : selection);
-  };
 
   const handleWilgotnoscSelectionChange = (selection: string) => {
     setWilgotnoscSelection(wilgotnoscSelection === selection ? null : selection);
@@ -26,41 +27,41 @@ const Skora: React.FC = () => {
 
   return (
     <div className="skora-container">
-      {/* Wyglad subsection */}
+      {/* Wyglad subsection - independent checkboxes */}
       <div className="wyglad-section">
         <FormCheckbox
-          className={`wyglad-w-normie ${wygladSelection !== null ? 'row-selected' : ''}`}
-          checked={wygladSelection === 'w-normie'}
-          onChange={() => handleWygladSelectionChange('w-normie')}
+          className="wyglad-w-normie"
+          checked={wygladWNormie}
+          onChange={() => setWygladWNormie(!wygladWNormie)}
         />
         <FormCheckbox
-          className={`wyglad-blada ${wygladSelection !== null ? 'row-selected' : ''}`}
-          checked={wygladSelection === 'blada'}
-          onChange={() => handleWygladSelectionChange('blada')}
+          className="wyglad-blada"
+          checked={wygladBlada}
+          onChange={() => setWygladBlada(!wygladBlada)}
         />
         <FormCheckbox
-          className={`wyglad-rumien ${wygladSelection !== null ? 'row-selected' : ''}`}
-          checked={wygladSelection === 'rumien'}
-          onChange={() => handleWygladSelectionChange('rumien')}
+          className="wyglad-rumien"
+          checked={wygladRumien}
+          onChange={() => setWygladRumien(!wygladRumien)}
         />
         <FormCheckbox
-          className={`wyglad-zazolcenie ${wygladSelection !== null ? 'row-selected' : ''}`}
-          checked={wygladSelection === 'zazolcenie'}
-          onChange={() => handleWygladSelectionChange('zazolcenie')}
+          className="wyglad-zazolcenie"
+          checked={wygladZazolcenie}
+          onChange={() => setWygladZazolcenie(!wygladZazolcenie)}
         />
         <FormCheckbox
-          className={`wyglad-sinica-obw ${wygladSelection !== null ? 'row-selected' : ''}`}
-          checked={wygladSelection === 'sinica-obw'}
-          onChange={() => handleWygladSelectionChange('sinica-obw')}
+          className="wyglad-sinica-obw"
+          checked={wygladSinicaObw}
+          onChange={() => setWygladSinicaObw(!wygladSinicaObw)}
         />
         <FormCheckbox
-          className={`wyglad-sinica-centr ${wygladSelection !== null ? 'row-selected' : ''}`}
-          checked={wygladSelection === 'sinica-centr'}
-          onChange={() => handleWygladSelectionChange('sinica-centr')}
+          className="wyglad-sinica-centr"
+          checked={wygladSinicaCentr}
+          onChange={() => setWygladSinicaCentr(!wygladSinicaCentr)}
         />
       </div>
 
-      {/* Wilgotnosc subsection */}
+      {/* Wilgotnosc subsection - radio button behavior */}
       <div className="wilgotnosc-section">
         <FormCheckbox
           className={`wilgotnosc-w-normie ${wilgotnoscSelection !== null ? 'row-selected' : ''}`}
@@ -79,7 +80,7 @@ const Skora: React.FC = () => {
         />
       </div>
 
-      {/* Temperatura subsection */}
+      {/* Temperatura subsection - radio button behavior */}
       <div className="temperatura-section">
         <FormCheckbox
           className={`temperatura-w-normie ${temperaturaSelection !== null ? 'row-selected' : ''}`}

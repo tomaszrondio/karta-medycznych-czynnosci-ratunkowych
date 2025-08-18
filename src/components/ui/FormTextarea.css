@@ -16,7 +16,7 @@
 
 .form-textarea.required {
   border: 1px solid transparent !important;
-  background-color: rgba(255, 0, 0, 0.4) !important;
+  background-color: rgba(255, 0, 0, 0.4) !important; /* Red for required fields */
 }
 
 @media print {
@@ -32,7 +32,7 @@
 
 .form-textarea.not-required {
   border: 1px solid transparent !important;
-  background-color: rgba(255, 255, 0, 0.5) !important;
+  background-color: rgba(255, 255, 0, 0.5) !important; /* Yellow for not required fields */
 }
 
 @media print {
@@ -40,7 +40,6 @@
     background-color: transparent !important;
   }
 }
-
 
 .form-textarea.not-required.has-content {
   border: none !important;

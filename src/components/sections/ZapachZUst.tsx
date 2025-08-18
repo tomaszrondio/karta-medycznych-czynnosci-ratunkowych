@@ -14,16 +14,19 @@ const ZapachZUst: React.FC = () => {
         className={`zapach-brak ${brakZapachu ? 'row-selected' : ''}`}
         checked={brakZapachu}
         onChange={() => setBrakZapachu(!brakZapachu)}
+        isRequired={false}
       />
       <FormCheckbox
         className={`zapach-alkohol ${alkohol ? 'row-selected' : ''}`}
         checked={alkohol}
         onChange={() => setAlkohol(!alkohol)}
+        isRequired={false}
       />
       <FormCheckbox
         className={`zapach-inne ${inne ? 'row-selected' : ''}`}
         checked={inne}
         onChange={() => setInne(!inne)}
+        isRequired={false}
       />
 
       {/* Textarea for inne */}

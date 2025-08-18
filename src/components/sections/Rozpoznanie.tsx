@@ -16,9 +16,11 @@ const Rozpoznanie: React.FC = () => {
       />
       <FormTextarea
         className="rozpoznanie-input2"
+        isRequired={false} // Optional input
       />
       <FormTextarea
         className="rozpoznanie-input3"
+        isRequired={false} // Optional input
       />
     </div>
   );

@@ -6,12 +6,17 @@ interface FormTextareaProps {
   placeholder?: string;
   defaultValue?: string;
   isRequired?: boolean;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-const FormTextarea: React.FC<FormTextareaProps> = ({ className, placeholder, defaultValue, isRequired = true }) => {
-  const [value, setValue] = useState(defaultValue || '');
+const FormTextarea: React.FC<FormTextareaProps> = ({ className, placeholder, defaultValue, isRequired = true, value: controlledValue, onChange }) => {
+  const [internalValue, setInternalValue] = useState(defaultValue || '');
   const [fontSize, setFontSize] = useState(16);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  // Use controlled value if provided, otherwise use internal state
+  const value = controlledValue !== undefined ? controlledValue : internalValue;
 
   const adjustFontSize = useCallback(() => {
     const textarea = textareaRef.current;
@@ -34,7 +39,11 @@ const FormTextarea: React.FC<FormTextareaProps> = ({ className, placeholder, def
   }, [value, adjustFontSize]);
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setValue(e.target.value);
+    if (onChange) {
+      onChange(e); // Call parent's onChange if provided
+    } else {
+      setInternalValue(e.target.value); // Use internal state if uncontrolled
+    }
   };
 
   return (

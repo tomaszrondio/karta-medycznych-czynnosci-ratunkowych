@@ -19,6 +19,7 @@ const NiedowladPorazenie: React.FC = () => {
         className={`niedowlad-w-normie ${wNormie ? 'row-selected' : ''}`}
         checked={wNormie}
         onChange={() => setWNormie(!wNormie)}
+        isRequired={false}
       />
 
       {/* L/P checkboxes - Row 1 */}
@@ -26,11 +27,13 @@ const NiedowladPorazenie: React.FC = () => {
         className={`niedowlad-row1-l ${lRow1 ? 'row-selected' : ''}`}
         checked={lRow1}
         onChange={() => setLRow1(!lRow1)}
+        isRequired={false}
       />
       <FormCheckbox
         className={`niedowlad-row1-p ${pRow1 ? 'row-selected' : ''}`}
         checked={pRow1}
         onChange={() => setPRow1(!pRow1)}
+        isRequired={false}
       />
 
       {/* L/P checkboxes - Row 2 */}
@@ -38,11 +41,13 @@ const NiedowladPorazenie: React.FC = () => {
         className={`niedowlad-row2-l ${lRow2 ? 'row-selected' : ''}`}
         checked={lRow2}
         onChange={() => setLRow2(!lRow2)}
+        isRequired={false}
       />
       <FormCheckbox
         className={`niedowlad-row2-p ${pRow2 ? 'row-selected' : ''}`}
         checked={pRow2}
         onChange={() => setPRow2(!pRow2)}
+        isRequired={false}
       />
 
     </div>

@@ -7,7 +7,7 @@ const ZaleceniaUwagi: React.FC = () => {
     <div className="zalecenia-uwagi-container">
       <FormTextarea
         className="zalecenia-uwagi-textarea"
-        isRequired={false}
+        isRequired={true}
       />
     </div>
   );
