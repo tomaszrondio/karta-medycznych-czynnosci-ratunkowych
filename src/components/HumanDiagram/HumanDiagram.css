@@ -95,6 +95,35 @@
   font-family: 'Courier New', Consolas, monospace;
   background: white;
   text-shadow: 1px 1px 0 white, -1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
+  cursor: grab;
+  transition: all 0.2s ease;
+}
+
+.legend-letter:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.legend-letter:active {
+  cursor: grabbing;
+}
+
+.placed-letter {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 14px;
+  font-family: 'Courier New', Consolas, monospace;
+  background: white;
+  text-shadow: 1px 1px 0 white, -1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
+  cursor: pointer;
+  pointer-events: all;
+  transform: translate(-50%, -50%); /* Center on mouse position */
 }
 
 .legend-description {

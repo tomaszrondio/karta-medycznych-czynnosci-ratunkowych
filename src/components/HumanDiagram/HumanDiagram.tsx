@@ -3,10 +3,20 @@ import { createPortal } from 'react-dom';
 import './HumanDiagram.css';
 import { FormTextarea } from '../ui';
 
+interface PlacedLetter {
+  id: string;
+  letter: string;
+  x: number;
+  y: number;
+}
+
 const HumanDiagram: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [scaleFactor, setScaleFactor] = useState(1);
+  const [placedLetters, setPlacedLetters] = useState<PlacedLetter[]>([]);
+  const [draggedLetter, setDraggedLetter] = useState<string | null>(null);
   const modalContentRef = useRef<HTMLDivElement>(null);
+  const diagramContainerRef = useRef<HTMLDivElement>(null);
 
   // Original container dimensions in mm
   const originalWidth = 53; // mm
@@ -56,6 +66,47 @@ const HumanDiagram: React.FC = () => {
     }
   };
 
+  const handleDragStart = (letter: string, e: React.DragEvent<HTMLDivElement>) => {
+    setDraggedLetter(letter);
+    
+    // Create a drag image to center the cursor
+    const dragElement = e.currentTarget;
+    const rect = dragElement.getBoundingClientRect();
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    // Set the drag image offset to center the cursor
+    e.dataTransfer.setDragImage(dragElement, centerX, centerY);
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    if (!draggedLetter || !diagramContainerRef.current) return;
+
+    const rect = diagramContainerRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    // Create new placed letter
+    const newLetter: PlacedLetter = {
+      id: `${draggedLetter}-${Date.now()}-${Math.random()}`,
+      letter: draggedLetter,
+      x,
+      y,
+    };
+
+    setPlacedLetters(prev => [...prev, newLetter]);
+    setDraggedLetter(null);
+  };
+
+  const handleLetterDoubleClick = (letterId: string) => {
+    setPlacedLetters(prev => prev.filter(letter => letter.id !== letterId));
+  };
+
   useEffect(() => {
     if (isModalOpen) {
       // Calculate after modal is rendered
@@ -93,56 +144,57 @@ const HumanDiagram: React.FC = () => {
             </button>
             <div className="human-diagram-editor">
               <div 
+                ref={diagramContainerRef}
                 className="human-diagram-modal-container"
                 style={{
                   width: `${originalWidth * scaleFactor}mm`,
                   height: `${originalHeight * scaleFactor}mm`,
                 }}
+                onDragOver={handleDragOver}
+                onDrop={handleDrop}
               >
-                {/* Dynamically scaled container content */}
+                {/* Placed letters */}
+                {placedLetters.map((placedLetter) => (
+                  <div
+                    key={placedLetter.id}
+                    className="placed-letter"
+                    style={{
+                      left: placedLetter.x,
+                      top: placedLetter.y,
+                    }}
+                    onDoubleClick={() => handleLetterDoubleClick(placedLetter.id)}
+                    title="Double-click to remove"
+                  >
+                    {placedLetter.letter}
+                  </div>
+                ))}
               </div>
               
               <div className="human-diagram-legend">
-                <div className="legend-item">
-                  <div className="legend-letter">O</div>
-                  <div className="legend-description">Złamanie otwarte</div>
-                </div>
-                <div className="legend-item">
-                  <div className="legend-letter">Z</div>
-                  <div className="legend-description">Złamanie zamknięte</div>
-                </div>
-                <div className="legend-item">
-                  <div className="legend-letter">W</div>
-                  <div className="legend-description">Zwichnięcie</div>
-                </div>
-                <div className="legend-item">
-                  <div className="legend-letter">S</div>
-                  <div className="legend-description">Stłuczenie</div>
-                </div>
-                <div className="legend-item">
-                  <div className="legend-letter">R</div>
-                  <div className="legend-description">Rana</div>
-                </div>
-                <div className="legend-item">
-                  <div className="legend-letter">K</div>
-                  <div className="legend-description">Krwotok z rany</div>
-                </div>
-                <div className="legend-item">
-                  <div className="legend-letter">M</div>
-                  <div className="legend-description">Zmiażdżenie</div>
-                </div>
-                <div className="legend-item">
-                  <div className="legend-letter">A</div>
-                  <div className="legend-description">Amputacja</div>
-                </div>
-                <div className="legend-item">
-                  <div className="legend-letter">N</div>
-                  <div className="legend-description">Ból nieurazowy</div>
-                </div>
-                <div className="legend-item">
-                  <div className="legend-letter">P</div>
-                  <div className="legend-description">Oparzenie</div>
-                </div>
+                {[
+                  { letter: 'O', description: 'Złamanie otwarte' },
+                  { letter: 'Z', description: 'Złamanie zamknięte' },
+                  { letter: 'W', description: 'Zwichnięcie' },
+                  { letter: 'S', description: 'Stłuczenie' },
+                  { letter: 'R', description: 'Rana' },
+                  { letter: 'K', description: 'Krwotok z rany' },
+                  { letter: 'M', description: 'Zmiażdżenie' },
+                  { letter: 'A', description: 'Amputacja' },
+                  { letter: 'N', description: 'Ból nieurazowy' },
+                  { letter: 'P', description: 'Oparzenie' },
+                ].map((item) => (
+                  <div key={item.letter} className="legend-item">
+                    <div 
+                      className="legend-letter"
+                      draggable
+                      onDragStart={(e) => handleDragStart(item.letter, e)}
+                      title="Drag to place on diagram"
+                    >
+                      {item.letter}
+                    </div>
+                    <div className="legend-description">{item.description}</div>
+                  </div>
+                ))}
               </div>
             </div>
             <div className="scale-indicator">
