@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
 import './ObrazeniaRightColumn.css';
 import { FormCheckbox, NumberInput, FormTextarea } from '../ui';
+import { useObrazeniaContext } from './ObrazeniaWrapper';
 
 const ObrazeniaRightColumn: React.FC = () => {
-  // Checkboxes
-  const [brakObrazen, setBrakObrazen] = useState<boolean>(false);
+  // Get shared state from context
+  const { brakObrazen, setBrakObrazen, setRightInputs } = useObrazeniaContext();
   const [oparzenieWziewne, setOparzenieWziewne] = useState<boolean>(false);
 
   // Number inputs for percentages
   const [percent1, setPercent1] = useState<string>('');
   const [percent2, setPercent2] = useState<string>('');
 
+  // Update setRightInputs whenever any input in this component changes
+  React.useEffect(() => {
+    const hasInputs = oparzenieWziewne || percent1.trim() !== '' || percent2.trim() !== '';
+    setRightInputs?.(hasInputs);
+  }, [oparzenieWziewne, percent1, percent2, setRightInputs]);
+
   return (
-    <div className="obrazenia-right-column-container">
+    <div className={`obrazenia-right-column-container ${brakObrazen ? 'brak-obrazen-selected' : ''}`}>
       {/* Brak obrażeń checkbox */}
       <FormCheckbox
         className={`brak-obrazen-checkbox ${brakObrazen ? 'row-selected' : ''}`}

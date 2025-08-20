@@ -11,6 +11,10 @@
   background-color: rgba(255, 255, 0, 0.5);
 }
 
+.human-diagram-container.has-letters {
+  background-color: transparent;
+}
+
 
 
 /* Modal styles */
@@ -59,9 +63,29 @@
   box-sizing: border-box;
   margin-top: 40px; /* Add space for close button */
   background-image: url('../../assets/diagram.jpg');
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
+  flex-shrink: 0;
+  min-width: auto;
+  min-height: auto;
+  touch-action: none; /* Prevent default touch actions like scrolling */
+}
+
+.main-placed-letter {
+  position: absolute;
+  width: 2.65mm; /* 10px converted to mm (10/3.78 ≈ 2.65mm) */
+  height: 2.65mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 2.65mm;
+  font-family: 'Courier New', Consolas, monospace;
+  background: white;
+  text-shadow: 0.26mm 0.26mm 0 white, -0.26mm 0.26mm 0 white, 0.26mm -0.26mm 0 white, -0.26mm -0.26mm 0 white;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Don't interfere with container clicks */
 }
 
 .human-diagram-editor {
@@ -97,6 +121,8 @@
   text-shadow: 1px 1px 0 white, -1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
   cursor: grab;
   transition: all 0.2s ease;
+  touch-action: none; /* Disable default touch actions for better drag experience */
+  user-select: none; /* Prevent text selection on touch */
 }
 
 .legend-letter:hover {

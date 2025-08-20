@@ -1,0 +1,4 @@
+/* Hide brak obrażeń yellow background when other inputs are filled */
+.has-other-inputs .brak-obrazen-checkbox {
+  background-color: transparent !important;
+}

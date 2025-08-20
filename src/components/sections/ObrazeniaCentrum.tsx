@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './ObrazeniaCentrum.css';
 import { FormCheckbox } from '../ui';
+import { useObrazeniaContext } from './ObrazeniaWrapper';
 
 const ObrazeniaCentrum: React.FC = () => {
+  const { brakObrazen, setCenterCheckboxes } = useObrazeniaContext();
   // Left column checkboxes
   const [checkbox1, setCheckbox1] = useState<boolean>(false);
   const [checkbox2, setCheckbox2] = useState<boolean>(false);
@@ -13,8 +15,14 @@ const ObrazeniaCentrum: React.FC = () => {
   const [checkbox5, setCheckbox5] = useState<boolean>(false);
   const [checkbox6, setCheckbox6] = useState<boolean>(false);
 
+  // Update setCenterCheckboxes whenever any checkbox changes
+  React.useEffect(() => {
+    const hasCenterInputs = checkbox1 || checkbox2 || checkbox3 || checkbox4 || checkbox5 || checkbox6;
+    setCenterCheckboxes?.(hasCenterInputs);
+  }, [checkbox1, checkbox2, checkbox3, checkbox4, checkbox5, checkbox6, setCenterCheckboxes]);
+
   return (
-    <div className="obrazenia-centrum-container">
+    <div className={`obrazenia-centrum-container ${brakObrazen ? 'brak-obrazen-selected' : ''}`}>
       {/* Left column */}
       <FormCheckbox
         className={`obrazenia-checkbox1 ${checkbox1 ? 'row-selected' : ''}`}

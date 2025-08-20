@@ -67,3 +67,12 @@
   left: 16.5mm;
   width: 10mm;
 }
+
+/* Hide yellow backgrounds when brak obrażeń is selected */
+.obrazenia-right-column-container.brak-obrazen-selected .stopnia1-input,
+.obrazenia-right-column-container.brak-obrazen-selected .stopnia2-input,
+.obrazenia-right-column-container.brak-obrazen-selected .oparzenie-wziewne-checkbox,
+.obrazenia-right-column-container.brak-obrazen-selected .percent1-input .number-input,
+.obrazenia-right-column-container.brak-obrazen-selected .percent2-input .number-input {
+  background-color: transparent !important;
+}
