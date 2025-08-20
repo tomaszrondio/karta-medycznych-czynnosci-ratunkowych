@@ -59,18 +59,9 @@
   color: transparent;
 }
 
-/* Print styles - remove all effects when printing */
+/* Print styles - behave exactly like browser display */
 @media print {
-  .ipsor-text.selected,
-  .innym-text.selected {
-    color: black !important;
-  }
-  
-  .ipsor-text.strikethrough,
-  .innym-text.strikethrough {
-    text-decoration: none !important;
-    color: black !important;
-  }
+  /* No overrides - let browser styles apply to print */
 }
 
 /* First row - Przekazanie pacjenta w IP/SOR / innym */
