@@ -1,6 +1,6 @@
 {
   "name": "karta-medycznych-czynnosci-ratunkowych",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Karta Medycznych Czynności Ratunkowych Desktop App",
   "main": "public/electron.js",
   "private": true,
