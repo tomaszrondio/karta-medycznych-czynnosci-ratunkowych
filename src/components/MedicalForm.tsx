@@ -35,7 +35,7 @@ import DecyzjaPodmiotu from './sections/DecyzjaPodmiotu';
 import PrzekazaniePacjenta from './sections/PrzekazaniePacjenta';
 import ObrazeniaCentrum from './sections/ObrazeniaCentrum';
 import ObrazeniaRightColumn from './sections/ObrazeniaRightColumn';
-import HumanDiagram from './sections/HumanDiagram';
+import HumanDiagram from './HumanDiagram';
 
 const MedicalForm: React.FC = () => {
   const [scale, setScale] = useState(1);

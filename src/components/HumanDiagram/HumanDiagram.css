@@ -1,0 +1,123 @@
+/* Human Diagram container */
+.human-diagram-container {
+  position: absolute;
+  top: 51mm;
+  left: 119mm;
+  width: 53mm;
+  height: 47mm;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: rgba(255, 255, 0, 0.5);
+}
+
+
+
+/* Modal styles */
+.human-diagram-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.human-diagram-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+}
+
+.human-diagram-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  z-index: 1001;
+}
+
+.human-diagram-modal-close:hover {
+  color: #333;
+}
+
+.human-diagram-modal-container {
+  position: relative;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  margin-top: 40px; /* Add space for close button */
+  background-image: url('../../assets/diagram.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.human-diagram-editor {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.human-diagram-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 40px; /* Align with container margin-top */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-letter {
+  width: 30px; /* 20px * 1.5 = 30px */
+  height: 30px; /* 20px * 1.5 = 30px */
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 21px; /* 14px * 1.5 = 21px */
+  font-family: 'Courier New', Consolas, monospace;
+  background: white;
+  text-shadow: 1px 1px 0 white, -1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
+}
+
+.legend-description {
+  font-size: 21px; /* 14px * 1.5 = 21px */
+  color: #333;
+}
+
+.scale-indicator {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+/* Hide modal on print */
+@media print {
+  .human-diagram-modal-overlay {
+    display: none !important;
+  }
+}
